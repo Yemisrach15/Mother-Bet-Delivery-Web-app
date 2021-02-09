@@ -8,6 +8,7 @@ body{
 }
 .txt{
     color: white;
+    font-size: 2rem;
 }
 .txt1{
     color: white;
@@ -35,4 +36,9 @@ body{
 }
 .img2{
     padding-top: 1rem;
+}
+
+.pabout{
+    padding-left: 3rem;
+    padding-right: 3rem;
 }
