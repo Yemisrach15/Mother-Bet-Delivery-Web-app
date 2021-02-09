@@ -8,13 +8,17 @@
 }
 
 body {
-    background: #ffffff;
+    background: #fff;
 }
 a:hover{
     text-decoration: none;
 }
 
 /* navigation section */
+.navbar{
+    background-color: #2a2f3b;
+    padding: 1em 2em 1em 2.5em;
+}
 .navbar-brand {
     color: #ff6700 !important;
     font-size: 2.8em;
@@ -30,6 +34,9 @@ a:hover{
 .navbar-collapse{
     justify-content: flex-end;
 }
+.nav-link{
+    padding: .5em 1.5em .5em 0;
+}
 nav ul {
     display: flex;
     flex-direction: column;
@@ -37,10 +44,10 @@ nav ul {
     margin-bottom: 0;
 }
 nav ul li a:hover{
-    color: #2a2f3b;
+    color: #decdc3c5;
 }
 nav ul li a {
-    color: #383e4ebd;
+    color: #decdc3;
 }
 
 
