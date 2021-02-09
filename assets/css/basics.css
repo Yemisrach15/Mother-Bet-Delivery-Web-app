@@ -3,12 +3,12 @@
 * {
     margin: 0;
     padding: 0;
-    color: rgb(255, 255, 255);
+    color: #2a2f3b;
     font-family: 'Poppins', sans-serif;
 }
 
 body {
-    background: #2a2f3b;
+    background: #ffffff;
 }
 a:hover{
     text-decoration: none;
@@ -37,10 +37,10 @@ nav ul {
     margin-bottom: 0;
 }
 nav ul li a:hover{
-    color: rgb(255, 255, 255);
+    color: #2a2f3b;
 }
 nav ul li a {
-    color: rgb(222, 205, 195);
+    color: #383e4ebd;
 }
 
 
@@ -84,5 +84,10 @@ footer ul li i{
 @media only screen and (max-width: 768px) {
     footer div div{
         margin-bottom: 1.8em;
+    }
+}
+@media only screen and (min-width: 768px) {
+    nav ul{
+        flex-direction: row;
     }
 }
