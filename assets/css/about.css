@@ -1,0 +1,38 @@
+body{
+    margin-right: 10px;
+    margin-left: 10px;
+    background: rgba(14, 12, 32, 0.822);;
+}
+.bag{
+    background-color: rgba(14, 12, 32, 0.822);
+}
+.txt{
+    color: white;
+}
+.txt1{
+    color: white;
+}
+.MBD{
+    font-family: 'Xanh Mono', monospace;
+    font-size: 5rem;
+    text-align: center;
+    padding-top: 3rem;
+    padding-bottom: 5rem;
+}
+.foodimg{
+    padding-left: 20rem;
+}
+.p1{
+    font-size: 15px;
+    color: white;
+}
+.last{
+    padding-top: 5rem;
+    
+}
+.img{
+    padding-bottom: 2rem;
+}
+.img2{
+    padding-top: 1rem;
+}
