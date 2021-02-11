@@ -20,7 +20,7 @@ a:hover{
     font-family: 'Satisfy', cursive;
 }
 .navbar-brand:hover{
-    color:#ff6600ee;
+    color:#ff6600;
 }
 .navbar-toggler-icon {
     background-image: url( 
@@ -126,33 +126,17 @@ footer ul li i{
     border-radius: 5%;
 }
 
-
-
-
-
-
-
-
-/* 
-
-
-footer{
-    background-color: #efe8e8;
-    color: #343A40;
+.btn-link{
+    color: #2a2f3b;
 }
 
-footer a{
+
+.btn-link:hover{
+    color: #ff6600;
     text-decoration: none;
-    color: #192821
 }
-footer a:hover{
-    text-decoration: none;
-    color: #FF6700;
-}
-footer h4{
-    margin-left: 2rem;
-}
-footer ul{
-    list-style: none;
 
-} */
+.faq-btn{
+    display: flex;
+    justify-content: space-between;
+}
