@@ -17,9 +17,9 @@
     color: #2a2f3b;
     padding: .5em 1.2em;
 }
-.filters li a.active {
+.active-filter {
     background: #ff6700;
-    color: #ffffff;
+    color: #ffffff !important;
     border-radius: .6em;
 }
 

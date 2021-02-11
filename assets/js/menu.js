@@ -1,5 +1,8 @@
 var db;
-var cards = document.querySelector(".cards");
+const cards = document.querySelector(".cards");
+const popularFilter = document.getElementById('popular-filter');
+const filters = document.querySelector('.filters ul');
+
 
 // var users = [
 //     { id: 1, userName: "John Doe", password: "123" },
@@ -7,7 +10,7 @@ var cards = document.querySelector(".cards");
 // ];
 
 var foodList = [
-    { id: 1, foodName: "Ertib", tag: ["fasting", "fast-food"], imgSrc: "assets/img/photo_2021-02-04_21-56-04.jpg", rating: 5, price: 25.00, description: "Very delicious"}, 
+    { id: 1, foodName: "Ertib", tag: ["fasting", "fast-food", "popular"], imgSrc: "assets/img/photo_2021-02-04_21-56-04.jpg", rating: 5, price: 25.00, description: "Very delicious"}, 
     { id: 2, foodName: "Firfir", tag: ["fasting"], imgSrc: "assets/img/photo_2021-02-04_21-56-10.jpg", rating: 4, price: 20.00, description: "tastes like home"},
 
 ]
@@ -49,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // for(let i = 0; i < users.length ; i++) {
         //   var request = userStore.put(users[i]);
         // };
-    
+
         // userTransaction.oncomplete = function() {
         //   console.log('User table Populated');
         // };
@@ -66,12 +69,12 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     function displayMenu() {
-    
+
       let foodStore = db.transaction('foods').objectStore('foods');
-    
+
       foodStore.openCursor().onsuccess = function(e) {
           let cursor = e.target.result;
-    
+
           if (cursor) {
 
             let ratingStars = '';
@@ -87,8 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
               tags += `<span>${cursor.value.tag[k]}</span>`;
             } 
 
-            console.log(ratingStars);
-
+            
             const foodCard = document.createElement("div");
             foodCard.className = 'col-12 col-md-4 col-lg-3';
             foodCard.innerHTML = `<a href="">
@@ -102,7 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         </span>
                     </p>
                     <p class="price">Price
-                        <span class="price-amount">${cursor.value.price}</span>
+                        <span class="price-amount">${cursor.value.price}.00</span>
                     </p>
                     <p class="tags">
                           ${tags}  
@@ -114,5 +116,69 @@ document.addEventListener('DOMContentLoaded', () => {
             cursor.continue();
           }
       }
-  }
+    };
+
+    filters.addEventListener('click', filterFunction);
+
+    function filterFunction(event) {
+      while (cards.firstChild) {   
+        cards.removeChild(cards.firstChild);
+      };
+
+	  let prevFilter = filters.querySelector('.active-filter');
+	  prevFilter.classList.remove('active-filter');
+
+	  event.target.classList.add('active-filter');
+
+      let foodStore = db.transaction('foods').objectStore('foods');
+
+      foodStore.openCursor().onsuccess = function(e) {
+          let cursor = e.target.result;
+
+          if (cursor) {
+
+            if (cursor.value.tag.includes(event.target.textContent.toLowerCase())) {
+              let ratingStars = '';
+              for (let i = 1; i <= cursor.value.rating; i++){
+                ratingStars += '<i class="fa fa-star"></i> ';
+              }
+              for (let j = 5 - cursor.value.rating; j > 0; j--){
+                ratingStars += '<i class="fa fa-star-o"></i> ';
+              }
+
+              let tags = '';
+              for (let k = 0; k < cursor.value.tag.length; k++){
+                tags += `<span>${cursor.value.tag[k]}</span>`;
+              } 
+
+              const foodCard = document.createElement("div");
+              foodCard.className = 'col-12 col-md-4 col-lg-3';
+              foodCard.innerHTML = `<a href="">
+              <div class="card">
+                  <img src="${cursor.value.imgSrc}" class="card-img-top img-fluid" alt="">
+                  <div class="card-body">
+                      <h5 class="card-title">${cursor.value.foodName}</h5>
+                      <p class="rating">Rating
+                          <span class="rating-stars">
+                            ${ratingStars}
+                          </span>
+                      </p>
+                      <p class="price">Price
+                          <span class="price-amount">${cursor.value.price}.00</span>
+                      </p>
+                      <p class="tags">
+                            ${tags}  
+                      </p>
+                  </div>
+              </div>
+              </a>`;
+              cards.appendChild(foodCard);
+              cursor.continue();
+            }
+			if (event.target.textContent.toLowerCase() == 'all') {
+				displayMenu();
+			}
+        }
+    }
+}
 })
