@@ -3,18 +3,22 @@
 * {
     margin: 0;
     padding: 0;
-    color: rgb(255, 255, 255);
+    color: #2a2f3b;
     font-family: 'Poppins', sans-serif;
 }
 
 body {
-    background: #2a2f3b;
+    background: #fff;
 }
 a:hover{
     text-decoration: none;
 }
 
 /* navigation section */
+.navbar{
+    background-color: #2a2f3b;
+    padding: 1em 2em 1em 2.5em;
+}
 .navbar-brand {
     color: #ff6700 !important;
     font-size: 2.8em;
@@ -30,6 +34,9 @@ a:hover{
 .navbar-collapse{
     justify-content: flex-end;
 }
+.nav-link{
+    padding: .5em 1.5em .5em 0;
+}
 nav ul {
     display: flex;
     flex-direction: column;
@@ -37,10 +44,10 @@ nav ul {
     margin-bottom: 0;
 }
 nav ul li a:hover{
-    color: rgb(255, 255, 255);
+    color: #decdc3c5;
 }
 nav ul li a {
-    color: rgb(222, 205, 195);
+    color: #decdc3;
 }
 
 
@@ -70,6 +77,9 @@ footer ul li:hover{
     text-decoration: none;
 }
 .hover-orange:hover{
+    color: #ff6700;
+}
+.hover-orange:hover i {
     color: #ff6700;
 }
 footer ul li i{
