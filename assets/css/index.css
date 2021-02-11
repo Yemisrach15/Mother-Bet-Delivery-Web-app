@@ -3,22 +3,17 @@
 * {
     margin: 0;
     padding: 0;
-    color: #2a2f3b;
     font-family: 'Poppins', sans-serif;
 }
 
 body {
-    background: #fff;
+    background: #2a2f3b;
 }
 a:hover{
     text-decoration: none;
 }
 
 /* navigation section */
-.navbar{
-    background-color: #2a2f3b;
-    padding: 1em 2em 1em 2.5em;
-}
 .navbar-brand {
     color: #ff6700 !important;
     font-size: 2.8em;
@@ -34,9 +29,6 @@ a:hover{
 .navbar-collapse{
     justify-content: flex-end;
 }
-.nav-link{
-    padding: .5em 1.5em .5em 0;
-}
 nav ul {
     display: flex;
     flex-direction: column;
@@ -44,10 +36,10 @@ nav ul {
     margin-bottom: 0;
 }
 nav ul li a:hover{
-    color: #decdc3c5;
+    color: rgb(255, 255, 255);
 }
 nav ul li a {
-    color: #decdc3;
+    color: rgb(222, 205, 195);
 }
 
 
@@ -79,9 +71,6 @@ footer ul li:hover{
 .hover-orange:hover{
     color: #ff6700;
 }
-.hover-orange:hover i {
-    color: #ff6700;
-}
 footer ul li i{
     margin-right: 1em;
 }
@@ -96,8 +85,74 @@ footer ul li i{
         margin-bottom: 1.8em;
     }
 }
+
 @media only screen and (min-width: 768px) {
     nav ul{
         flex-direction: row;
     }
 }
+.dark-bg{
+    background-color: #2a2f3b;
+
+}
+.gray-bg{
+    background-color: #efe8e8;
+    color: #2a2f3b;
+
+}
+.color-white{
+    color: white;
+}
+.color-dark{
+    color: #313643;
+}
+.btn-orange{
+    background-color: #FF6700;
+    color: #fff;
+}
+
+
+.focus{
+
+    font-size: 10vh;
+    font-weight: bold;
+
+}
+.plain{
+    font-size: 6vh;
+}
+
+.round-img{
+    border-radius: 5%;
+}
+
+
+
+
+
+
+
+
+/* 
+
+
+footer{
+    background-color: #efe8e8;
+    color: #343A40;
+}
+
+footer a{
+    text-decoration: none;
+    color: #192821
+}
+footer a:hover{
+    text-decoration: none;
+    color: #FF6700;
+}
+footer h4{
+    margin-left: 2rem;
+}
+footer ul{
+    list-style: none;
+
+} */
