@@ -38,22 +38,21 @@
                 <div id="login-row" class="row justify-content-center align-items-center">
                     <div id="login-column" class="col-md-6">
                         <div id="login-box" class="col-md-12">
-                            <form id="login-form" class="form" action="" method="post">
+                            <form id="login-form" class="form" action="index.html">
                                 <h3 class="text-center">Login</h3>
                                 <div class="form-group">
                                     <label for="username" class="">Username:</label><br>
-                                    <input type="text" name="username" id="username" class="form-control">
+                                    <input type="text" name="username" id="userName" class="form-control">
                                 </div>
                                 <div class="form-group">
                                     <label for="password" class="">Password:</label><br>
-                                    <input type="text" name="password" id="password" class="form-control">
+                                    <input type="password" name="password" id="password" class="form-control">
                                 </div>
+                                <div class="show-error"></div>
                                 <div class="form-group">
-                                    <label for="remember-me" class=""><span>Remember me</span> <span><input id="remember-me" name="remember-me" type="checkbox"></span></label><br>
-                                    <input type="submit" name="submit" class="btn btn-info btn-md" value="submit">
-                                </div>
-                                <div id="register-link" class="text-right">
-                                    <a href="#" class="text-info">Register here</a>
+                                    <div id="register-link" class="text-right">
+                                        <button class="text-info" type="submit" id="logInBtn">Log In</button>
+                                    </div>
                                 </div>
                             </form>
                         </div>
@@ -95,8 +94,13 @@
         <p>&copy; Copyright 2021 Mother Bet Delivery.</p>
     </div>
 </footer>
-    </body>
-    
-    
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/log-in.js"></script>
+    </body>   
 
 </html>
