@@ -79,6 +79,9 @@ footer ul li:hover{
 .hover-orange:hover{
     color: #ff6700;
 }
+.hover-orange:hover i {
+    color: #ff6700;
+}
 footer ul li i{
     margin-right: 1em;
 }
