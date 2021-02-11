@@ -18,7 +18,7 @@ body {
     height: 100%;
     position: absolute;
     padding: 90px 70px 50px 70px;
-    background:  rgba(14, 12, 32, 0.822);
+    background: white;
 }
 
 .login-snip .login {
@@ -68,7 +68,7 @@ body {
 .login-space .group .input,
 .login-space .group .button {
     width: 100%;
-    color: #fff;
+    color: grey;
     display: block
 }
 
@@ -127,7 +127,7 @@ body {
 }
 
 .login-space .group .check:checked+label {
-    color: #fff
+    color: black;
 }
 
 .login-space .group .check:checked+label .icon {
@@ -150,7 +150,6 @@ body {
     transform: rotate(0)
 } */
 
-*,
 :after,
 :before {
     box-sizing: border-box
@@ -161,25 +160,20 @@ body {
     content: '';
     display: table
 }
-
+/* 
 .clearfix:after {
     clear: both;
     display: block
-}
+} */
 
 a {
     color: inherit;
     text-decoration: none
 }
 
-/* .hr {
-    height: 2px;
-    margin: 60px 0 50px 0;
-    background: rgba(255, 255, 255, .2)
-} */
-
 .foot {
-    text-align: center
+    text-align: center;
+    padding-top: 2rem;
 }
 
 .card {

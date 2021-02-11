@@ -16,7 +16,7 @@ crossorigin="anonymous">
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Xanh+Mono:ital@1&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/basics.css">
-<link rel="stylesheet" href="assets/css/signup.css">
+<link rel="stylesheet" href="assets/css/signup2.css">
 </head>
 <body>
 
@@ -30,44 +30,52 @@ crossorigin="anonymous">
         <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="colNav">
-            <ul>
+            <!-- <ul>
                 <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
                 <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                 <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
                 <li class="nav-item"><a class="nav-link" href="sign-up.html">Sign Up</a></li>
                 <li class="nav-item"><a class="nav-link" href="log-in.html">Log In</a></li>
-            </ul>
+            </ul> -->
         </div>
         
     </nav>
 
-
-
-    
-    <div class="row">
-        <div class="col-md-6 mx-auto p-0">
-            <div class="card">
-                <div class="login-box">
-                    <div class="login-snip"> <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign Up</label>
-                        <div class="login-space">
-                            <div class="login">
-                                <div class="group"> <label for="user" class="label">Username</label> <input id="user" type="text" class="input" placeholder="Enter your username"> </div>
-                                <div class="group"> <label for="pass" class="label">Password</label> <input id="pass" type="password" class="input" data-type="password" placeholder="Enter your password"> </div>
-                                <div class="group"> <input id="check" type="checkbox" class="check" checked> <label for="check"><span class="icon"></span> Keep me Signed in</label> </div>
-                                <div class="group"> <input type="submit" class="button" value="Sign In"> </div>
-                                <div class="hr"></div>
-                                <div class="foot"> <a href="#">Forgot Password?</a> </div>
+    <div id="signup">
+        <!-- <h3 class="text-center pt-5">Login form</h3> -->
+        <div class="container">
+            <div id="signup-row" class="row justify-content-center align-items-center">
+                <div id="signup-column" class="col-md-6">
+                    <div id="signup-box" class="col-md-12">
+                        <form id="signup-form" class="form" action="user-index.html">
+                            <h3 class="text-center">SignUp</h3>
+                            <div class="form-group">
+                                <label for="username" class="">Username:</label><br>
+                                <input type="text" name="username" id="userName" class="form-control" placeholder="Enter username">
                             </div>
-                            <div class="sign-up-form">
-                                <div class="group"> <label for="user" class="label">Username</label> <input id="user" type="text" class="input" placeholder="Create your Username"> </div>
-                                <div class="group"> <label for="pass" class="label">Password</label> <input id="pass" type="password" class="input" data-type="password" placeholder="Create your password"> </div>
-                                <div class="group"> <label for="pass" class="label">Repeat Password</label> <input id="pass" type="password" class="input" data-type="password" placeholder="Repeat your password"> </div>
-                                <div class="group"> <label for="pass" class="label">Email Address</label> <input id="pass" type="text" class="input" placeholder="Enter your email address"> </div>
-                                <div class="group"> <input type="submit" class="button" value="Sign Up"> </div>
-                                <div class="hr"></div>
-                                <div class="foot"> <a class="nav-link" href="log-in.html"><label for="tab-1">Already Member?</label></a> </div>
+                            <div class="form-group">
+                                <label for="userphone" class="">Phone Number:</label><br>
+                                <input type="number" name="userphone" id="userPhone" class="form-control" placeholder="Enter phone number">
                             </div>
-                        </div>
+                            <div class="form-group">
+                                <label for="useremail" class="">Email:</label><br>
+                                <input type="email" name="useremail" id="userEmail" class="form-control" placeholder="Enter email">
+                            </div>
+                            <div class="form-group">
+                                <label for="userpassword" class="">Passwork:</label><br>
+                                <input type="password" name="userpassword" id="password1" class="form-control" placeholder="Enter your password">
+                            </div>
+                            <div class="form-group">
+                                <label for="passwordchecked" class="">Password checked:</label><br>
+                                <input type="password" name="passwordchecked" id="password" class="form-control" placeholder="Enter your password Again">
+                            </div>
+                            <div class="show-error"></div>
+                            <div class="form-group">
+                                <div id="register-link" class="text-right">
+                                    <button class="text-info" type="submit" id="signupBtn">Sign Up</button>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
