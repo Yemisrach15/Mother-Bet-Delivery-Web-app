@@ -20,7 +20,7 @@ crossorigin="anonymous">
 </head>
 <body>
 
-
+<div>
     <nav class="navbar navbar-expand-md navbar-dark">
         <a href="index.html" class="navbar-brand">Mother Bet Delivery</a>
         <button class="navbar-toggler" type="button" 
@@ -40,49 +40,51 @@ crossorigin="anonymous">
         </div>
         
     </nav>
-
+</div>
     <div id="signup">
         <!-- <h3 class="text-center pt-5">Login form</h3> -->
         <div class="container">
-            <div id="signup-row" class="row justify-content-center align-items-center">
-                <div id="signup-column" class="col-md-6">
-                    <div id="signup-box" class="col-md-12">
-                        <form id="signup-form" class="form" action="user-index.html">
-                            <h3 class="text-center">SignUp</h3>
-                            <div class="form-group">
-                                <label for="username" class="">Username:</label><br>
-                                <input type="text" name="username" id="userName" class="form-control" placeholder="Enter username">
-                            </div>
-                            <div class="form-group">
-                                <label for="userphone" class="">Phone Number:</label><br>
-                                <input type="number" name="userphone" id="userPhone" class="form-control" placeholder="Enter phone number">
-                            </div>
-                            <div class="form-group">
-                                <label for="useremail" class="">Email:</label><br>
-                                <input type="email" name="useremail" id="userEmail" class="form-control" placeholder="Enter email">
-                            </div>
-                            <div class="form-group">
-                                <label for="userpassword" class="">Passwork:</label><br>
-                                <input type="password" name="userpassword" id="password1" class="form-control" placeholder="Enter your password">
-                            </div>
-                            <div class="form-group">
-                                <label for="passwordchecked" class="">Password checked:</label><br>
-                                <input type="password" name="passwordchecked" id="password" class="form-control" placeholder="Enter your password Again">
-                            </div>
-                            <div class="show-error"></div>
-                            <div class="form-group">
-                                <div id="register-link" class="text-right">
-                                    <button class="text-info" type="submit" id="signupBtn">Sign Up</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
+            <div class="header">
+                <h2>SignUp</h2>
             </div>
+            <form class="form" id="form">
+                <div class="form-control">
+                    <label for="username">Username:</label>
+                    <input type="text" name="username" id="user" placeholder="Enter username">
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Invalid input!</small>
+                </div>
+                <div class="form-control">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="Enter Email address">
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Invalid input!</small>
+                </div>
+                <div class="form-control">
+                    <label for="password1">Password</label>
+                    <input type="password" name="password1" id="pass1" placeholder="Enter password">
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Invalid input!</small>
+                </div>
+                <div class="form-control">
+                    <label for="password2">Password checked</label>
+                    <input type="password" name="password2" id="pass2" placeholder="Enter password again">
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Invalid input!</small>
+                </div>
+
+                <button>SignUp</button>
+
+            </form>
         </div>
+        
     </div>
 
-
+<!-- <div>
     <footer>
         <div class="row">
             <div class="col-md-2 col-sm-12">
@@ -116,6 +118,7 @@ crossorigin="anonymous">
             <p>&copy; Copyright 2021 Mother Bet Delivery.</p>
         </div>
     </footer>
+</div> -->
 
 
 
