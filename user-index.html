@@ -14,7 +14,7 @@
   </head>
 <body>
     
-    <nav class="navbar navbar-expand-md navbar-dark">
+    <nav class="navbar navbar-expand-md navbar-dark dark-bg">
         <a href="index.html" class="navbar-brand">Mother Bet Delivery</a>
         <button class="navbar-toggler" type="button" 
         data-toggle="collapse" data-target="#colNav"
@@ -57,8 +57,8 @@
 
 
 <!-- favorites section start -->
-    <section id="favorites" class="favorites   my-0 py-5 white-bg ">
-        <div class="container">
+    <section id="favorites" class="favorites my-0 py-5 white-bg ">
+        <div class="container ">
   
           <div class="section-title text-center mb-5">
             <h2>Your <span class="color-orange">Favorites</span> </h2>
@@ -154,49 +154,65 @@
     </section>
 <!-- favorites section end -->
 
-<!-- menu section start -->
-    <section class="container-fluid white-bg   ">
-        <div class="container">
-            <div class="mb-5 section-title text-center">
-                <h2 class="color-orange"> Menus </h2>
-            </div>
+<!-- menu and order section start -->
+    <section class=" white-bg  row ">
+<!-- menu column start -->
+        <div class="col-lg-8">
+            <div class=" container">
+                <h2 class=" col-12 color-orange text-center mb-5"> Menus </h2>
+            
             <!-- filters -->
-            <div class="filters ">
+                <div class="filters ">
                 <ul >
                     <li><a class="active-filter" type="button">All</a></li>
-                    <li><a type="button btn-orange-border">Popular</a></li>
+                    <li><a type="button">Popular</a></li>
                     <li><a type="button">Fasting</a></li>
                     <li><a type="button">Vegan</a></li>
                     <li><a type="button">Fast-food</a></li>
                     <li><a type="button">Meat</a></li>
                 </ul>
-            </div>
-    
+                </div>
             <!-- cards for each food on menu -->
-            <div class="cards row">
-            </div> 
-        
+                <div class="cards row">
+                </div> 
+            </div>
+        </div>
+<!-- menu column end-->
+
+<!-- How to Order column - start -->
+        <div class="how-to col-lg-4 mb-4">
+            <div class="container dark-bg">
+                
+                <h2 class="color-gray text-center pt-3 mb-5"> <span class="color-orange" >?</span>  How to Order <span class="color-orange" >?</span>  </h2>
+                <div class="d-flex flex-column">
+                    <div class="box">
+                        <span>01</span>
+                        <h4>Lorem Ipsum</h4>
+                        <p>Ulamco laboris nisi ut aliquip ex ea commodo consequat. Et consectetur ducimus vero placeat</p>
+                    </div>
+                    <div class="box">
+                        <span>02</span>
+                        <h4>Lorem Ipsum</h4>
+                        <p>Ulamco laboris nisi ut aliquip ex ea commodo consequat. Et consectetur ducimus vero placeat</p>
+                    </div>
+                    <div class="box">
+                        <span>03</span>
+                        <h4>Lorem Ipsum</h4>
+                        <p>Ulamco laboris nisi ut aliquip ex ea commodo consequat. Et consectetur ducimus vero placeat</p>
+                    </div>
+                    
+                  </div>
+                </div>
+
+            </div>
         </div>
         </section>
-<!-- menu section end -->
+<!-- How to Order column - end-->
+
+<!-- menu section - end -->
 
 
-  
-    
-
-    <section class="dark-bg color-white text-center p-2 ">
-        <div class="m-3 text-center container">
-            <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae nihil hic
-                delectus excepturi ipsam reprehenderit iusto rem, quam, repellendus accusantium culpa
-                reiciendis sit dolorum aut aperiam a architecto. Fuga, sit.
-              </p>
-        </div>
-        
-        
-          
-    </section>
-
+<!-- footer - start -->
     <footer>
       <div class="row">
           <div class="col-md-2 col-sm-12">
@@ -229,9 +245,8 @@
       <div class="copyright">
           <p>&copy; Copyright 2021 Mother Bet Delivery.</p>
       </div>
-    
-  </footer>
-
+    </footer>
+<!-- footer - end -->
 <!-- custom js -->
     <script src="assets/js/menu.js"></script>
 

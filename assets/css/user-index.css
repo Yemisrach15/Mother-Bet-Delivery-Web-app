@@ -1,3 +1,8 @@
+body {
+    background: #fff;
+}
+
+/* favorites - start */
 .favorites {
     overflow: hidden;
   }
@@ -31,10 +36,6 @@
     animation: fadeIn 0.5s ease-out;
   }
 
-  
-
-
-  
   .favorites .details h3 {
     font-size: 26px;
     font-weight: 600;
@@ -60,4 +61,47 @@
       background: #FF6700;
     }
   }
+/* .favorites - end */
 
+  /*  How To Order - start */
+  
+  .how-to .box {
+    padding: 50px 30px;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    transition: all ease-in-out 0.3s;
+    margin-bottom: 2rem;
+  }
+  
+  .how-to .box span {
+    display: block;
+    font-size: 28px;
+    font-weight: 700;
+    color: #ffcf88;
+  }
+  
+  .how-to .box h4 {
+    font-size: 24px;
+    font-weight: 600;
+    padding: 0;
+    margin: 20px 0;
+    color: #6c665c;
+  }
+  
+  .how-to .box p {
+    color: #aaaaaa;
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .how-to .box:hover {
+    background: #ffb03b;
+    padding: 30px 30px 70px 30px;
+    box-shadow: 10px 15px 30px rgba(0, 0, 0, 0.18);
+  }
+  
+  .how-to .box:hover span, .how-to .box:hover h4, .how-to .box:hover p {
+    color: #fff;
+  }
+  /* How to Order - End */
