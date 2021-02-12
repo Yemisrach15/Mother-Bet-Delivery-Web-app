@@ -43,38 +43,51 @@ crossorigin="anonymous">
 
 
 
-    
-    <div class="row">
-        <div class="col-md-6 mx-auto p-0">
-            <div class="card">
-                <div class="login-box">
-                    <div class="login-snip"> <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign Up</label>
-                        <div class="login-space">
-                            <div class="login">
-                                <div class="group"> <label for="user" class="label">Username</label> <input id="user" type="text" class="input" placeholder="Enter your username"> </div>
-                                <div class="group"> <label for="pass" class="label">Password</label> <input id="pass" type="password" class="input" data-type="password" placeholder="Enter your password"> </div>
-                                <div class="group"> <input id="check" type="checkbox" class="check" checked> <label for="check"><span class="icon"></span> Keep me Signed in</label> </div>
-                                <div class="group"> <input type="submit" class="button" value="Sign In"> </div>
-                                <div class="hr"></div>
-                                <div class="foot"> <a href="#">Forgot Password?</a> </div>
-                            </div>
-                            <div class="sign-up-form">
-                                <div class="group"> <label for="user" class="label">Username</label> <input id="user" type="text" class="input" placeholder="Create your Username"> </div>
-                                <div class="group"> <label for="pass" class="label">Password</label> <input id="pass" type="password" class="input" data-type="password" placeholder="Create your password"> </div>
-                                <div class="group"> <label for="pass" class="label">Repeat Password</label> <input id="pass" type="password" class="input" data-type="password" placeholder="Repeat your password"> </div>
-                                <div class="group"> <label for="pass" class="label">Email Address</label> <input id="pass" type="text" class="input" placeholder="Enter your email address"> </div>
-                                <div class="group"> <input type="submit" class="button" value="Sign Up"> </div>
-                                <div class="hr"></div>
-                                <div class="foot"> <a class="nav-link" href="log-in.html"><label for="tab-1">Already Member?</label></a> </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <div id="signup">
+        <div class="container">
+            <div class="header">
+                <h2>SignUp</h2>
             </div>
+            <form class="form" id="form">
+                <div class="form-control">
+                    <label for="username">Username</label>
+                    <input type="text" name="username" id="username" placeholder="Enter username">
+                    <i class="fa fa-check-circle"></i>
+                    <i class="fa fa-exclamation-circle"></i>
+                    <small>Invalid input!</small>
+                </div>
+                <div class="form-control">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="Enter Email address">
+                    <i class="fa fa-check-circle"></i>
+                    <i class="fa fa-exclamation-circle"></i>
+                    <small>Invalid input!</small>
+                </div>
+                <div class="form-control">
+                    <label for="password1">Password</label>
+                    <input type="password" name="password1" id="password placeholder="Enter password">
+                    <i class="fa fa-check-circle"></i>
+                    <i class="fa fa-exclamation-circle"></i>
+                    <small>Invalid input!</small>
+                </div>
+                <div class="form-control">
+                    <label for="password2">Confirm Password</label>
+                    <input type="password" name="pa" id="password2" placeholder="Enter password again">
+                    <i class="fa fa-check-circle"></i>
+                    <i class="fa fa-exclamation-circle"></i>
+                    <small>Invalid input!</small>
+                </div>
+                <button>SignUp</button>
+                <div class="foot"> <a class="nav-link" href="log-in.html"><label for="tab-1">Already Member?</label></a> </div>
+            </form>
         </div>
+        
     </div>
 
 
+
+
+<div>
     <footer>
         <div class="row">
             <div class="col-md-2 col-sm-12">
@@ -108,6 +121,7 @@ crossorigin="anonymous">
             <p>&copy; Copyright 2021 Mother Bet Delivery.</p>
         </div>
     </footer>
+</div>
 
 
 
@@ -117,6 +131,7 @@ crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
  <script src="assets/js/app.js"></script>
+ <script src="assets/js/sign-up.js"></script>
 
 </body>
 </html>
