@@ -3,210 +3,216 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mother Bet Delivery : Home</title>
+    <title>Mother Bet Delivery </title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">    <link rel="stylesheet" href="assets/css/index.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- <link rel="stylesheet" href="assets/css/basics.css"> -->
     <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/user-index.css">
+    <link rel="stylesheet" href="assets/css/menu.css">
+    
   </head>
 <body>
     
-  <nav class="navbar navbar-expand-md navbar-dark">
-    <a href="index.html" class="navbar-brand">Mother Bet Delivery</a>
-    <button class="navbar-toggler" type="button" 
-    data-toggle="collapse" data-target="#colNav"
-    aria-controls="navbarSupportedContent" aria-expanded="false"
-    aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="colNav">
-        <ul>
-            <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
-            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-            <li class="nav-item"><a class="nav-link" href="sign-up.html">Sign Up</a></li>
-            <li class="nav-item"><a class="nav-link" href="log-in.html">Log In</a></li>
-        </ul>
-    </div>
+    <nav class="navbar navbar-expand-md navbar-dark dark-bg">
+        <a href="user-index.html" class="navbar-brand">Mother Bet Delivery</a>
+        <button class="navbar-toggler" type="button" 
+        data-toggle="collapse" data-target="#colNav"
+        aria-controls="navbarSupportedContent" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="colNav">
+            <ul>
+            
+                <li class="nav-item"><a class="nav-link" href="user-contact.html">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="user-about.html">About</a></li>
+                <div>
+                    <li class="nav-item color-orange  "role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false ">
+                        <i class="fa fa-user-circle a fa-2x" aria-hidden="true"></i>
+                    </li>
+                    <div class="dropdown-menu  dropdown-menu-right" aria-labelledby="dropdownMenuLink">
+                        <h5 class="dropdown-item" > [user-name] </h5>
+                        <a class="dropdown-item" href="#">
+                            <i class="fa fa-heart-o color-orange mr-3" aria-hidden="true"></i>
+                            My list
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <i class="fa fa-address-card-o color-orange mr-3" aria-hidden="true"></i>
+
+                            Edit profile
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <i class="fa fa-sign-out color-orange mr-3" aria-hidden="true"></i>
+                            Sign out
+                        </a>
+                    </div>  
+                </div>
+                
+            </ul>
+        </div>
     
-</nav>
+    </nav>
 
 
-    <header class="dark-bg">
-        <div class="card mb-3 dark-bg p-5" >
-            <div class="row ">
-              <div class="col-md-6">
-                <img src="https://cdn.theculturetrip.com/wp-content/uploads/2017/05/ethiopianfoodlist.jpg" class="card-img round-img" alt="...">
-              </div>
-              <div class="col-md-6">
-                <div class="card-body p-5">
-                  <p class="card-text color-white  "> <span class="focus mr-3">Fresh</span> <span class="plain">food.</span></p>
-                  <p class="card-text color-white "><span class="focus mr-3">Fast</span> <span class="plain">delivery.</span></p>
-                  <button class="btn btn-orange text-center" >Order Now <i class="fa fa-chevron-right" aria-hidden="true"></i>
-                  </button>
+
+<!-- favorites section start -->
+    <section id="favorites" class="favorites my-0 py-5 white-bg ">
+        <div class="container ">
+  
+          <div class="section-title text-center mb-5">
+            <h2>Your <span class="color-orange">Favorites</span> </h2>
+          </div>
+  
+          <div class="row">
+            <div class="col-lg-3 ">
+              <ul class="nav nav-tabs flex-column ">
+                <li class="nav-item">
+                  <a class="nav-link active show" data-toggle="tab" href="#tab-1">food one</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-toggle="tab" href="#tab-2">food two</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-toggle="tab" href="#tab-3">food three </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-toggle="tab" href="#tab-4">food four</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-toggle="tab" href="#tab-5">food five</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-lg-9 mt-4 mt-lg-0">
+              <div class="tab-content">
+                <div class="tab-pane active show" id="tab-1">
+                  <div class="row">
+                    <div class="col-lg-8 details order-2 order-lg-1">
+                      <h3>Architecto ut aperiam autem id</h3>
+                      <p class="font-italic">Qui laudantium consequatur laborum sit qui ad sapiente dila parde sonata raqer a videna mareta paulona marka</p>
+                      <p>Et nobis maiores eius. Voluptatibus ut enim blanditiis atque harum sint. Laborum eos ipsum ipsa odit magni. Incidunt hic ut molestiae aut qui. Est repellat minima eveniet eius et quis magni nihil. Consequatur dolorem quaerat quos qui similique accusamus nostrum rem vero</p>
+                    </div>
+                    <div class="col-lg-4 text-center order-1 order-lg-2">
+                      <img src="https://cdn.theculturetrip.com/wp-content/uploads/2017/05/ethiopianfoodlist.jpg" alt="" class="img-fluid">
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane" id="tab-2">
+                  <div class="row">
+                    <div class="col-lg-8 details order-2 order-lg-1">
+                      <h3>Et blanditiis nemo veritatis excepturi</h3>
+                      <p class="font-italic">Qui laudantium consequatur laborum sit qui ad sapiente dila parde sonata raqer a videna mareta paulona marka</p>
+                      <p>Ea ipsum voluptatem consequatur quis est. Illum error ullam omnis quia et reiciendis sunt sunt est. Non aliquid repellendus itaque accusamus eius et velit ipsa voluptates. Optio nesciunt eaque beatae accusamus lerode pakto madirna desera vafle de nideran pal</p>
+                    </div>
+                    <div class="col-lg-4 text-center order-1 order-lg-2">
+                      <img src=https://dynaimage.cdn.cnn.com/cnn/q_auto,w_634,c_fill,g_auto,h_357,ar_16:9/http%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F190205185944-shrimp-wot.jpg" alt="" class="img-fluid">
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane" id="tab-3">
+                  <div class="row">
+                    <div class="col-lg-8 details order-2 order-lg-1">
+                      <h3>Impedit facilis occaecati odio neque aperiam sit</h3>
+                      <p class="font-italic">Eos voluptatibus quo. Odio similique illum id quidem non enim fuga. Qui natus non sunt dicta dolor et. In asperiores velit quaerat perferendis aut</p>
+                      <p>Iure officiis odit rerum. Harum sequi eum illum corrupti culpa veritatis quisquam. Neque necessitatibus illo rerum eum ut. Commodi ipsam minima molestiae sed laboriosam a iste odio. Earum odit nesciunt fugiat sit ullam. Soluta et harum voluptatem optio quae</p>
+                    </div>
+                    <div class="col-lg-4 text-center order-1 order-lg-2">
+                      <img src="https://cdn.theculturetrip.com/wp-content/uploads/2017/05/ethiopianfoodlist.jpg" alt="" class="img-fluid">
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane" id="tab-4">
+                  <div class="row">
+                    <div class="col-lg-8 details order-2 order-lg-1">
+                      <h3>Fuga dolores inventore laboriosam ut est accusamus laboriosam dolore</h3>
+                      <p class="font-italic">Totam aperiam accusamus. Repellat consequuntur iure voluptas iure porro quis delectus</p>
+                      <p>Eaque consequuntur consequuntur libero expedita in voluptas. Nostrum ipsam necessitatibus aliquam fugiat debitis quis velit. Eum ex maxime error in consequatur corporis atque. Eligendi asperiores sed qui veritatis aperiam quia a laborum inventore</p>
+                    </div>
+                    <div class="col-lg-4 text-center order-1 order-lg-2">
+                      <img src="https://cdn.theculturetrip.com/wp-content/uploads/2017/05/ethiopianfoodlist.jpg" alt="" class="img-fluid">
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane" id="tab-5">
+                  <div class="row">
+                    <div class="col-lg-8 details order-2 order-lg-1">
+                      <h3>Est eveniet ipsam sindera pad rone matrelat sando reda</h3>
+                      <p class="font-italic">Omnis blanditiis saepe eos autem qui sunt debitis porro quia.</p>
+                      <p>Exercitationem nostrum omnis. Ut reiciendis repudiandae minus. Omnis recusandae ut non quam ut quod eius qui. Ipsum quia odit vero atque qui quibusdam amet. Occaecati sed est sint aut vitae molestiae voluptate vel</p>
+                    </div>
+                    <div class="col-lg-4 text-center order-1 order-lg-2">
+                      <img src=https://dynaimage.cdn.cnn.com/cnn/q_auto,w_634,c_fill,g_auto,h_357,ar_16:9/http%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F190205185944-shrimp-wot.jpg" alt="" class="img-fluid">
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-    </header>
-
   
-    <div id="carouselExampleControls" class="carousel slide gray-bg  m-0" data-ride="carousel">
-        <div class="carousel-inner container p-5 m-5 color-dark  ">
-            <div class="col-6 ">
-                <h3 class="mb-3 color-dark">Popular </h3>
-            </div>
-            <div class="carousel-item active">
-                <div class="row">
-                    
-                    <div class="col-md-4 mb-3">
-                        <div class="card">
-                            <img class="img-fluid" alt="100%x280" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcQo3YVOy4nyDFUBshbh-AVCH4uaqI01cjSQ&usqp=CAU">
-                            <div class="card-body ">
-                                <h4 class="card-title ">Food name</h4>
-                                <p>Rating ******</p>
-                                <p>Price 30 ETB </p>
-                                <button class="btn btn-orange text-center " >+</i>
-
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-3">
-                        <div class="card">
-                            <img class="img-fluid" alt="100%x280" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcQo3YVOy4nyDFUBshbh-AVCH4uaqI01cjSQ&usqp=CAU">
-                            <div class="card-body">
-                                <h4 class="card-title">Food name</h4>
-                                <p>Rating ******</p>
-                                <p>Price 30 ETB </p>
-                                <button class="btn btn-orange text-center" >+</i>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-3">
-                        <div class="card">
-                            <img class="img-fluid" alt="100%x280" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcQo3YVOy4nyDFUBshbh-AVCH4uaqI01cjSQ&usqp=CAU">
-                            <div class="card-body">
-                                <h4 class="card-title">Food name</h4>
-                                <p>Rating ******</p>
-                                <p>Price 30 ETB </p>
-                                <button class="btn btn-orange text-center" >+</i>
-                                
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="row">
-
-                    <div class="col-md-4 mb-3">
-                        <div class="card">
-                            <img class="img-fluid" alt="100%x280" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcQo3YVOy4nyDFUBshbh-AVCH4uaqI01cjSQ&usqp=CAU">
-                            <div class="card-body">
-                                <h4 class="card-title">Food name</h4>
-                                <p>Rating ******</p>
-                                <p>Price 30 ETB </p>
-                                <button class="btn btn-orange text-center" >+</i>
-
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-3">
-                        <div class="card">
-                            <img class="img-fluid" alt="100%x280" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcQo3YVOy4nyDFUBshbh-AVCH4uaqI01cjSQ&usqp=CAU">
-                            <div class="card-body">
-                                <h4 class="card-title">Food name</h4>
-                                <p>Rating ******</p>
-                                <p>Price 30 ETB </p>
-                                <button class="btn btn-orange text-center" >+</i>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-3">
-                        <div class="card">
-                            <img class="img-fluid" alt="100%x280" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcQo3YVOy4nyDFUBshbh-AVCH4uaqI01cjSQ&usqp=CAU">
-                            <div class="card-body">
-                                <h4 class="card-title">Food name</h4>
-                                <p>Rating ******</p>
-                                <p>Price 30 ETB </p>
-                                <button class="btn btn-orange text-center" >+</i>
-
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="row">
-
-                    <div class="col-md-4 mb-3">
-                        <div class="card">
-                            <img class="img-fluid" alt="100%x280" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcQo3YVOy4nyDFUBshbh-AVCH4uaqI01cjSQ&usqp=CAU">
-                            <div class="card-body">
-                                <h4 class="card-title">Food name</h4>
-                                <p>Rating ******</p>
-                                <p>Price 30 ETB </p>
-                                <button class="btn btn-orange text-center" >+</i>
-
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-3">
-                        <div class="card">
-                            <img class="img-fluid" alt="100%x280" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcQo3YVOy4nyDFUBshbh-AVCH4uaqI01cjSQ&usqp=CAU">
-                            <div class="card-body">
-                                <h4 class="card-title">Food name</h4>
-                                <p>Rating ******</p>
-                                <p>Price 30 ETB </p>
-                                <button class="btn btn-orange text-center" >+</i>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-3">
-                        <div class="card">
-                            <img class="img-fluid" alt="100%x280" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcQo3YVOy4nyDFUBshbh-AVCH4uaqI01cjSQ&usqp=CAU">
-                            <div class="card-body">
-                                <h4 class="card-title">Food name</h4>
-                                <p>Rating ******</p>
-                                <p>Price 30 ETB </p>
-                                <button class="btn btn-orange text-center" >+</i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
-        <a class="carousel-control-prev " href="#carouselExampleControls" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon mr-5 color-dark" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next  " href="#carouselExampleControls" role="button" data-slide="next">
-          <span class="carousel-control-next-icon ml-5 " aria-hidden="true"></span>
-          <span class="sr-only color-dark">Next</span>
-        </a>
-      </div>
-
-    <section class="dark-bg color-white text-center p-2 ">
-        <div class="m-3 text-center container">
-            <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae nihil hic
-                delectus excepturi ipsam reprehenderit iusto rem, quam, repellendus accusantium culpa
-                reiciendis sit dolorum aut aperiam a architecto. Fuga, sit.
-              </p>
-        </div>
-        
-        
-          
     </section>
+<!-- favorites section end -->
 
+<!-- menu and order section start -->
+    <section class=" white-bg  row ">
+<!-- menu column start -->
+        <div class="col-lg-8">
+            <div class=" container">
+                <h2 class=" col-12 color-orange text-center mb-5"> Menus </h2>
+            
+            <!-- filters -->
+                <div class="filters ">
+                <ul >
+                    <li><a class="active-filter" type="button">All</a></li>
+                    <li><a type="button">Popular</a></li>
+                    <li><a type="button">Fasting</a></li>
+                    <li><a type="button">Vegan</a></li>
+                    <li><a type="button">Fast-food</a></li>
+                    <li><a type="button">Meat</a></li>
+                </ul>
+                </div>
+            <!-- cards for each food on menu -->
+                <div class="cards row">
+                </div> 
+            </div>
+        </div>
+<!-- menu column end-->
+
+<!-- How to Order column - start -->
+        <div class="how-to col-lg-4 mb-4">
+            <div class="container dark-bg">
+                
+                <h2 class="color-gray text-center pt-3 mb-5"> <span class="color-orange" >?</span>  How to Order <span class="color-orange" >?</span>  </h2>
+                <div class="d-flex flex-column">
+                    <div class="box">
+                        <span>01</span>
+                        <h4>Lorem Ipsum</h4>
+                        <p>Ulamco laboris nisi ut aliquip ex ea commodo consequat. Et consectetur ducimus vero placeat</p>
+                    </div>
+                    <div class="box">
+                        <span>02</span>
+                        <h4>Lorem Ipsum</h4>
+                        <p>Ulamco laboris nisi ut aliquip ex ea commodo consequat. Et consectetur ducimus vero placeat</p>
+                    </div>
+                    <div class="box">
+                        <span>03</span>
+                        <h4>Lorem Ipsum</h4>
+                        <p>Ulamco laboris nisi ut aliquip ex ea commodo consequat. Et consectetur ducimus vero placeat</p>
+                    </div>
+                    
+                  </div>
+                </div>
+
+            </div>
+        </div>
+        </section>
+<!-- How to Order column - end-->
+
+<!-- menu section - end -->
+
+
+<!-- footer - start -->
     <footer>
       <div class="row">
           <div class="col-md-2 col-sm-12">
@@ -239,10 +245,12 @@
       <div class="copyright">
           <p>&copy; Copyright 2021 Mother Bet Delivery.</p>
       </div>
-    
-  </footer>
+    </footer>
+<!-- footer - end -->
+<!-- custom js -->
+    <script src="assets/js/menu.js"></script>
 
-   
+
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script></body>
