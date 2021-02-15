@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,600;1,100&family=Satisfy&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    color: #2a2f3b;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #fff;
+}
+a:hover{
+    text-decoration: none;
+}
+
+/* navigation section */
+.navbar{
+    background-color: rgb(21, 53, 233);
+    padding: 1em 2em 1em 2.5em;
+    /* padding-top: 6rem;
+    padding-bottom: 10rem; */
+}
+.navbar-brand {
+    color: #ff6700 !important;
+    font-size: 2.8em;
+    font-family: 'Satisfy', cursive;
+}
+.navbar-brand:hover{
+    color:#ff6600ee;
+}
+.navbar-toggler-icon {
+    background-image: url( 
+        "data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#ff6700' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"); 
+}
+.navbar-collapse{
+    justify-content: flex-end;
+}
+.nav-link{
+    padding: .5em 1.5em .5em 0;
+    /* padding-top: 3rem; */
+}
+nav ul {
+    /* display: flex;
+    flex-direction: column; */
+    list-style: none;
+    margin-bottom: 0;
+}
+nav ul li a:hover{
+    color: #decdc3c5;
+}
+nav ul li a {
+    color: #decdc3;
+}
+
+.card{
+    margin-top: 5rem;
+}
+
+.n1{
+    height: auto;
+}
+
+
+
+/* Responsive layout */
+@media only screen and (max-width: 768px) {
+    footer div div{
+        margin-bottom: 1.8em;
+    }
+}
+@media only screen and (min-width: 768px) {
+    nav ul{
+        flex-direction: row;
+    }
+}

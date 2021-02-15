@@ -1,6 +1,6 @@
 body{
-    /* margin-right: 15px;
-    margin-left: 15px; */
+    margin: 0%;
+    /* margin-left: 15px;  */
 
     /* background: rgba(14, 12, 32, 0.822); */
 }
@@ -11,9 +11,7 @@ body{
 .txt{
    font-size: 2rem;
 }
-.txt1{
-   
-}
+
 .MBD{
     font-family: 'Xanh Mono', monospace;
     font-size: 5rem;
