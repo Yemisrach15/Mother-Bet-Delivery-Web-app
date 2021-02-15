@@ -7,6 +7,7 @@
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/css/basics.css">
     <link rel="stylesheet" href="assets/css/login.css">
 </head>
@@ -32,75 +33,76 @@
         </div>
         
     </nav>
-        <div id="login">
-            <!-- <h3 class="text-center pt-5">Login form</h3> -->
-            <div class="container">
-                <div id="login-row" class="row justify-content-center align-items-center">
-                    <div id="login-column" class="col-md-6">
-                        <div id="login-box" class="col-md-12">
-                            <form id="login-form" class="form" action="user-index.html">
-                                <h3 class="text-center">Login</h3>
-                                <div class="form-group">
-                                    <label for="username" class="">Username:</label><br>
-                                    <input type="text" name="username" id="userName" class="form-control">
+
+    <div id="login">
+        <!-- <h3 class="text-center pt-5">Login form</h3> -->
+        <div class="container">
+            <div id="login-row" class="row justify-content-center align-items-center">
+                <div id="login-column" class="col-md-6">
+                    <div id="login-box" class="col-md-12">
+                        <form id="login-form" class="form" action="user-index.html">
+                            <h3 class="text-center">Login</h3>
+                            <div class="form-group">
+                                <label for="username" class="">Username:</label><br>
+                                <input type="text" name="username" id="userName" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="password" class="">Password:</label><br>
+                                <input type="password" id="password" class="form-control">
+                            </div>
+                            <div class="show-error"></div>
+                            <div class="form-group">
+                                <div id="register-link" class="text-right">
+                                    <button class="text-info" type="submit" id="logInBtn">Log In</button>
                                 </div>
-                                <div class="form-group">
-                                    <label for="password" class="">Password:</label><br>
-                                    <input type="password" name="password" id="password" class="form-control">
-                                </div>
-                                <div class="show-error"></div>
-                                <div class="form-group">
-                                    <div id="register-link" class="text-right">
-                                        <button class="text-info" type="submit" id="logInBtn">Log In</button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
-        
-<footer>
-    <div class="row">
-        <div class="col-md-2 col-sm-12">
-            <h5>Quick Links</h5>
-            <ul>
-                <li><a class="hover-orange" href="index.html"><i class="fa fa-cutlery mr-2" aria-hidden="true"></i>Home</a></li>
-                <li><a class="hover-orange" href="#"><i class="fa fa-cutlery mr-2" aria-hidden="true"></i>FAQ</a></li>
-                <li><a class="hover-orange" href="about.html"><i class="fa fa-cutlery mr-2" aria-hidden="true"></i>About</a></li>
-            </ul>
-        </div>
-        <div class="col-md-3 col-sm-12">
-            <h5>Delivery Locations</h5>
-            <ul>
-                <li class="hover-orange">Natural Science Faculty</li>
-                <li class="hover-orange">Main Campus</li>
-                <li class="hover-orange">Institute of Technology</li>
-                <li class="hover-orange">College of Business and Economics</li>
-            </ul>
-        </div>
-        <div class="col-md-3 col-sm-12">
-            <h5>Contact</h5>
-            <ul>
-                <li><i class="fa fa-phone"></i><a class="hover-orange" href="tel:+251 900 01 02 03">+251 900 01 02 03</a></li>
-                <li><i class="fa fa-envelope"></i><a class="hover-orange" href="mailto:contact@MotherBetDelivery.com">info@MBD.com</a></li>
-                <li><i class="fa fa-telegram"></i><a class="hover-orange" href="">MotherBetDelivery</a></li>
-            </ul>
-        </div>
     </div>
-    <hr>
-    <div class="copyright">
-        <p>&copy; Copyright 2021 Mother Bet Delivery.</p>
-    </div>
-</footer>
+    
+    <footer>
+        <div class="row">
+            <div class="col-md-2 col-sm-12">
+                <h5>Quick Links</h5>
+                <ul>
+                    <li><a class="hover-orange" href="index.html"><i class="fa fa-cutlery mr-2" aria-hidden="true"></i>Home</a></li>
+                    <li><a class="hover-orange" href="#"><i class="fa fa-cutlery mr-2" aria-hidden="true"></i>FAQ</a></li>
+                    <li><a class="hover-orange" href="about.html"><i class="fa fa-cutlery mr-2" aria-hidden="true"></i>About</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 col-sm-12">
+                <h5>Delivery Locations</h5>
+                <ul>
+                    <li class="hover-orange">Natural Science Faculty</li>
+                    <li class="hover-orange">Main Campus</li>
+                    <li class="hover-orange">Institute of Technology</li>
+                    <li class="hover-orange">College of Business and Economics</li>
+                </ul>
+            </div>
+            <div class="col-md-3 col-sm-12">
+                <h5>Contact</h5>
+                <ul>
+                    <li><i class="fa fa-phone"></i><a class="hover-orange" href="tel:+251 900 01 02 03">+251 900 01 02 03</a></li>
+                    <li><i class="fa fa-envelope"></i><a class="hover-orange" href="mailto:contact@MotherBetDelivery.com">info@MBD.com</a></li>
+                    <li><i class="fa fa-telegram"></i><a class="hover-orange" href="">MotherBetDelivery</a></li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <div class="copyright">
+            <p>&copy; Copyright 2021 Mother Bet Delivery.</p>
+        </div>
+    </footer>
 
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
     <script src="assets/js/app.js"></script>
     <script src="assets/js/log-in.js"></script>
-    </body>   
+</body>   
 
 </html>
