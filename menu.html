@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Xanh+Mono:ital@1&display=swap" rel="stylesheet">
 
     <!-- custom css -->
     <link rel="stylesheet" href="assets/css/basics.css">
@@ -41,45 +40,18 @@
         <!-- filters -->
         <div class="filters">
             <ul>
-                <li><a class="active-filter" type="button">All</a></li>
-                <li><a type="button">Popular</a></li>
-                <li><a type="button">Fasting</a></li>
-                <li><a type="button">Vegan</a></li>
-                <li><a type="button">Fast-food</a></li>
-                <li><a type="button">Meat</a></li>
+                <li><button class="active-filter filter-btn" type="button">All</button></li>
+                <li><button class="filter-btn">Popular</button></li>
+                <li><button class="filter-btn">Fasting</button></li>
+                <li><button class="filter-btn">Vegan</button></li>
+                <li><button class="filter-btn">Fast-food</button></li>
+                <li><button class="filter-btn">Meat</button></li>
             </ul>
         </div>
     
         <!-- cards for each food on menu -->
         <div class="cards row">
             <!-- menu items go here -->
-            
-            <!-- <div class="col-12 col-md-4 col-lg-3">
-                <a href="">
-                    <div class="card">
-                        <img src="assets/img/photo_2021-02-04_21-56-04.jpg" class="card-img-top img-fluid" alt="">
-                        <div class="card-body">
-                            <h5 class="card-title">Food Name</h5>
-                            <p class="rating">Rating
-                                <span class="rating-stars">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star-o"></i>
-                                </span>
-                            </p>
-                            <p class="price">Price
-                                <span class="price-amount">ETB 30.00</span>
-                            </p>
-                            <p class="tags">
-                                <span>fasting</span>
-                                <span>fast-food</span>
-                            </p>
-                        </div>
-                    </div>
-                </a>
-            </div> -->
             
         </div>
             
@@ -107,9 +79,9 @@
             <div class="col-md-3 col-sm-12">
                 <h5>Contact</h5>
                 <ul>
-                    <li><i class="fa fa-phone"></i><a class="hover-orange" href="tel:+251 900 01 02 03">+251 900 01 02 03</a></li>
-                    <li><i class="fa fa-envelope"></i><a class="hover-orange" href="mailto:contact@MotherBetDelivery.com">info@MBD.com</a></li>
-                    <li><i class="fa fa-telegram"></i><a class="hover-orange" href="">MotherBetDelivery</a></li>
+                    <li><a class="hover-orange" href="tel:+251 900 01 02 03"><i class="fa fa-phone"></i> +251 900 01 02 03</a></li>
+                    <li><a class="hover-orange" href="mailto:contact@MotherBetDelivery.com"><i class="fa fa-envelope"></i> info@MBD.com</a></li>
+                    <li><a class="hover-orange" href=""><i class="fa fa-telegram"></i> MotherBetDelivery</a></li>
                 </ul>
             </div>
         </div>
@@ -125,6 +97,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
     <!-- custom js -->
+    <script src="assets/js/app.js"></script>
     <script src="assets/js/menu.js"></script>
     
 </body>
