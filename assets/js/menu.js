@@ -37,8 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
             
             const foodCard = document.createElement("div");
             foodCard.className = 'col-12 col-md-4 col-lg-3';
-            foodCard.innerHTML = `<a href="">
-            <div class="card">
+            foodCard.innerHTML = `<div class="card" data-food-id="${cursor.value.id}" style="cursor: pointer;">
                 <img src="${cursor.value.imgSrc}" class="card-img-top img-fluid" alt="">
                 <div class="card-body">
                     <h5 class="card-title">${cursor.value.foodName}</h5>
@@ -54,8 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
                           ${tags}  
                     </p>
                 </div>
-            </div>
-            </a>`;
+            </div>`;
             cards.appendChild(foodCard);
             cursor.continue();
           }
