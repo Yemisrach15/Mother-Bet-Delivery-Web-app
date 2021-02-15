@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mother Bet Delivery </title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- <link rel="stylesheet" href="assets/css/basics.css"> -->
     <link rel="stylesheet" href="assets/css/index.css">
@@ -32,14 +32,13 @@
                         <i class="fa fa-user-circle a fa-2x" aria-hidden="true"></i>
                     </li>
                     <div class="dropdown-menu  dropdown-menu-right" aria-labelledby="dropdownMenuLink">
-                        <h5 class="dropdown-item" > [user-name] </h5>
+                        <h5 class="dropdown-item" id="user-name"> [user-name] </h5>
                         <a class="dropdown-item" href="#">
                             <i class="fa fa-heart-o color-orange mr-3" aria-hidden="true"></i>
                             My list
                         </a>
                         <a class="dropdown-item" href="#">
                             <i class="fa fa-address-card-o color-orange mr-3" aria-hidden="true"></i>
-
                             Edit profile
                         </a>
                         <a class="dropdown-item" href="#">
@@ -66,7 +65,7 @@
   
           <div class="row">
             <div class="col-lg-3 ">
-              <ul class="nav nav-tabs flex-column ">
+              <ul class="nav nav-tabs flex-column fav-list">
                 <li class="nav-item">
                   <a class="nav-link active show" data-toggle="tab" href="#tab-1">food one</a>
                 </li>
@@ -88,11 +87,11 @@
               <div class="tab-content">
                 <div class="tab-pane active show" id="tab-1">
                   <div class="row">
-                    <div class="col-lg-8 details order-2 order-lg-1">
+                    <!-- <div class="col-lg-8 details order-2 order-lg-1">
                       <h3>Architecto ut aperiam autem id</h3>
                       <p class="font-italic">Qui laudantium consequatur laborum sit qui ad sapiente dila parde sonata raqer a videna mareta paulona marka</p>
                       <p>Et nobis maiores eius. Voluptatibus ut enim blanditiis atque harum sint. Laborum eos ipsum ipsa odit magni. Incidunt hic ut molestiae aut qui. Est repellat minima eveniet eius et quis magni nihil. Consequatur dolorem quaerat quos qui similique accusamus nostrum rem vero</p>
-                    </div>
+                    </div> -->
                     <div class="col-lg-4 text-center order-1 order-lg-2">
                       <img src="https://cdn.theculturetrip.com/wp-content/uploads/2017/05/ethiopianfoodlist.jpg" alt="" class="img-fluid">
                     </div>
@@ -100,11 +99,11 @@
                 </div>
                 <div class="tab-pane" id="tab-2">
                   <div class="row">
-                    <div class="col-lg-8 details order-2 order-lg-1">
+                    <!-- <div class="col-lg-8 details order-2 order-lg-1">
                       <h3>Et blanditiis nemo veritatis excepturi</h3>
                       <p class="font-italic">Qui laudantium consequatur laborum sit qui ad sapiente dila parde sonata raqer a videna mareta paulona marka</p>
                       <p>Ea ipsum voluptatem consequatur quis est. Illum error ullam omnis quia et reiciendis sunt sunt est. Non aliquid repellendus itaque accusamus eius et velit ipsa voluptates. Optio nesciunt eaque beatae accusamus lerode pakto madirna desera vafle de nideran pal</p>
-                    </div>
+                    </div> -->
                     <div class="col-lg-4 text-center order-1 order-lg-2">
                       <img src=https://dynaimage.cdn.cnn.com/cnn/q_auto,w_634,c_fill,g_auto,h_357,ar_16:9/http%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F190205185944-shrimp-wot.jpg" alt="" class="img-fluid">
                     </div>
@@ -162,17 +161,17 @@
                 <h2 class=" col-12 color-orange text-center mb-5"> Menus </h2>
             
             <!-- filters -->
-                <div class="filters ">
+                <div class="filters">
                 <ul >
-                    <li><a class="active-filter" type="button">All</a></li>
-                    <li><a type="button">Popular</a></li>
-                    <li><a type="button">Fasting</a></li>
-                    <li><a type="button">Vegan</a></li>
-                    <li><a type="button">Fast-food</a></li>
-                    <li><a type="button">Meat</a></li>
+                  <li><button class="active-filter filter-btn" type="button">All</button></li>
+                  <li><button class="filter-btn">Popular</button></li>
+                  <li><button class="filter-btn">Fasting</button></li>
+                  <li><button class="filter-btn">Vegan</button></li>
+                  <li><button class="filter-btn">Fast-food</button></li>
+                  <li><button class="filter-btn">Meat</button></li>
                 </ul>
                 </div>
-            <!-- cards for each food on menu -->
+                <!-- cards for each food on menu -->
                 <div class="cards row">
                 </div> 
             </div>
@@ -247,8 +246,11 @@
       </div>
     </footer>
 <!-- footer - end -->
+
 <!-- custom js -->
+    <script src="assets/js/app.js"></script>
     <script src="assets/js/menu.js"></script>
+    <script src="assets/js/logged-in.js"></script>
 
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
