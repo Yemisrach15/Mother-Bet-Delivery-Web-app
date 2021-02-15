@@ -9,6 +9,11 @@
 body {
     background: #2a2f3b;
 }
+
+.a-white{
+    color: white;
+    
+}
 a:hover{
     text-decoration: none;
 }
