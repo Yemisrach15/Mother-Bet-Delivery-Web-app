@@ -10,7 +10,25 @@
     <link rel="stylesheet" href="assets/css/index.css">
     <link rel="stylesheet" href="assets/css/user-index.css">
     <link rel="stylesheet" href="assets/css/menu.css">
-    
+    <style>
+      /* .fav-slides {display:none;} */
+      </style>
+      <script>
+        var myIndex = 0;
+        carousel();
+        
+        function carousel() {
+          var i;
+          var x = document.getElementsByClassName("fav-img");
+          for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";  
+          }
+          myIndex++;
+          if (myIndex > x.length) {myIndex = 1}    
+          x[myIndex-1].style.display = "block";  
+          setTimeout(carousel, 2000); // Change image every 2 seconds
+        }
+        </script>
   </head>
 <body>
     
@@ -55,51 +73,119 @@
 
 
 
-<!-- favorites section start -->
-    <section id="favorites" class="favorites my-0 py-5 white-bg ">
-        <div class="container ">
-  
-          <div class="section-title text-center mb-5">
-            <h2>Your <span class="color-orange">Favorites</span> </h2>
-          </div>
-  
-          <div class="row">
-            <div class="col-lg-3 ">
-              <ul class="nav nav-tabs flex-column fav-list">
-                <li class="nav-item">
-                  <a class="nav-link active show" data-toggle="tab" href="#tab-1">food one</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" data-toggle="tab" href="#tab-2">food two</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" data-toggle="tab" href="#tab-3">food three </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" data-toggle="tab" href="#tab-4">food four</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" data-toggle="tab" href="#tab-5">food five</a>
-                </li>
-              </ul>
+<!-- favorites and checkout section start -->
+    <div class="fav-check row">
+      <!-- favorites - start -->
+      <section class="favorites col-md-7 p-5 flex-column">
+        <div class=" text-center mb-5">
+          <h2>Your <span class="color-orange">Favorites</span> </h2>
+        </div> 
+        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(15).jpg "
+                alt="First slide">
             </div>
-            <div class="col-lg-9 mt-4 mt-lg-0">
-              <div class="tab-content">
-                <div class="tab-pane active show" id="tab-1">
-                  <div class="row">
-                   <div class="col-lg-4 text-center order-1 order-lg-2">
-                      <img src="https://cdn.theculturetrip.com/wp-content/uploads/2017/05/ethiopianfoodlist.jpg" alt="" class="img-fluid">
-                    </div>
-                  </div>
-                </div>
-                
-              </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(16).jpg"
+                alt="Second slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(17).jpg"
+                alt="Third slide">
             </div>
           </div>
-  
+          <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
         </div>
-    </section>
-<!-- favorites section end -->
+        <!-- not working -->
+        <!-- <div class= "fav-slides" style="max-width:500px">
+          <img class="fav-img" src="assets/img/img beyaynet.jfif" style="width:100%">
+          <img class="fav-img" src="assets/img/imgTegabino2.jfif" style="width:100%">
+          <img class="fav-img" src="assets/img/images.jpg" style="width:100%">
+        </div> -->
+      </section> 
+      <!-- favorites - end  -->
+      <!-- checkout - start -->
+      <section  class="p-5 col-md-5 fixed checkout">
+        <div class=" text-center mb-5">
+          <h2>Your <span class="color-orange">Orders</span> </h2>
+        </div> 
+        <div class="list-group-flush">
+          <li class="list-group-item list-group-item-action flex-column ">
+
+            <div class="d-flex w-100">
+              <div>Food name</div>
+              <div  class="ml-auto d-flex">
+                <div class="mr-2 border-right">  1
+                  <button class="btn b-none"><i class="fa fa-minus color-orange" aria-hidden="true"></i></button>
+                  <button class="btn b-none"><i class="fa fa-plus color-orange" aria-hidden="true"></i></button>
+                </div>
+                <div class="mr-2 border-right text-center p-2">112 birr </div>
+                <button class="btn b-none"><i class="fa fa-minus-circle color-red" aria-hidden="true"></i></button>
+                </div>
+              </div>
+          </li> 
+          <li class="list-group-item list-group-item-action flex-column ">
+
+            <div class="d-flex w-100">
+              <div>Food name</div>
+              <div  class="ml-auto d-flex">
+                <div class="mr-2 border-right">  1
+                  <button class="btn b-none"><i class="fa fa-minus color-orange" aria-hidden="true"></i></button>
+                  <button class="btn b-none"><i class="fa fa-plus color-orange" aria-hidden="true"></i></button>
+                </div>
+                <div class="mr-2 border-right text-center p-2">112 birr </div>
+                <button class="btn b-none"><i class="fa fa-minus-circle color-red" aria-hidden="true"></i></button>
+                </div>
+              </div>
+          </li> 
+          <li class="list-group-item list-group-item-action flex-column ">
+
+            <div class="d-flex w-100">
+              <div>Food name</div>
+              <div  class="ml-auto d-flex">
+                <div class="mr-2 border-right">  1
+                  <button class="btn b-none"><i class="fa fa-minus color-orange" aria-hidden="true"></i></button>
+                  <button class="btn b-none"><i class="fa fa-plus color-orange" aria-hidden="true"></i></button>
+                </div>
+                <div class="mr-2 border-right text-center p-2">112 birr </div>
+                <button class="btn b-none"><i class="fa fa-minus-circle color-red" aria-hidden="true"></i></button>
+                </div>
+              </div>
+          </li>
+          <li class="list-group-item list-group-item-action flex-column ">
+
+            <div class="d-flex w-100">
+              <div>Food name</div>
+              <div  class="ml-auto d-flex">
+                <div class="mr-2 border-right">  1
+                  <button class="btn b-none"><i class="fa fa-minus color-orange" aria-hidden="true"></i></button>
+                  <button class="btn b-none"><i class="fa fa-plus color-orange" aria-hidden="true"></i></button>
+                </div>
+                <div class="mr-2 border-right text-center p-2">112 birr </div>
+                <button class="btn b-none"><i class="fa fa-minus-circle color-red" aria-hidden="true"></i></button>
+                </div>
+              </div>
+          </li>
+          <li class="list-group-item list-group-item-action flex-column text-center ">
+            <button class=" btn btn-orange ">Check Out</button>
+          </li>
+          
+        </div>
+      </section>
+      <!-- checkout - end  -->
+       
+    </div>
+    
+    
+<!-- favorites section cart end -->
 
 <!-- menu and order section start -->
     <section class=" white-bg  row ">
@@ -153,7 +239,7 @@
 
             </div>
         </div>
-        </section>
+    </section>
 <!-- How to Order column - end-->
 
 <!-- menu section - end -->
@@ -196,6 +282,7 @@
 <!-- footer - end -->
 
 <!-- custom js -->
+
     <script src="assets/js/app.js"></script>
     <script src="assets/js/menu.js"></script>
     <script src="assets/js/logged-in.js"></script>
