@@ -1,13 +1,28 @@
 var db;
 
 var users = [
-    { id: 1, userName: "John Doe", password: "123" },
-    { id: 2, userName: "Jane Doe", password: "456" },
+    { id: 1, userName: "John Doe", password: "123", favorites: [1, 2] },
+    { id: 2, userName: "Jane Doe", password: "456", favorites: [4, 5, 6, 2, 9, 11]},
 ];
 
 var foodList = [
-    { id: 1, foodName: "Ertib", tag: ["fasting", "fast-food", "popular"], imgSrc: "assets/img/photo_2021-02-04_21-56-04.jpg", rating: 5, price: 25.00, description: "Very delicious"}, 
-    { id: 2, foodName: "Firfir", tag: ["fasting"], imgSrc: "assets/img/photo_2021-02-04_21-56-10.jpg", rating: 4, price: 20.00, description: "tastes like home"}
+    { id: 1, foodName: "Ertib", tag: ["fasting", "fast-food", "popular"], imgSrc: "assets/img/photo_2021-02-04_21-56-04.jpg", rating: 5, price: 25.00}, 
+    { id: 2, foodName: "Firfir", tag: ["fasting", "popular"], imgSrc: "assets/img/photo_2021-02-04_21-56-10.jpg", rating: 4, price: 20.00}, 
+    { id: 3, foodName: "Pasta", tag: [], imgSrc: "assets/img/photo_2021-02-04_21-56-04.jpg", rating: 5, price: 30.00}, 
+    { id: 4, foodName: "Pasta with veggies", tag: ["fasting", "vegan"], imgSrc: "assets/img/photo_2021-02-04_21-56-04.jpg", rating: 5, price: 35.00},
+    { id: 5, foodName: "Shiro", tag: ["fasting", "popular", "vegan"], imgSrc: "assets/img/photo_2021-02-04_21-56-04.jpg", rating: 5, price: 30.00},
+    { id: 6, foodName: "Tegabino", tag: ["fasting", "vegan"], imgSrc: "assets/img/photo_2021-02-04_21-56-04.jpg", rating: 5, price: 35.00},
+    { id: 7, foodName: "Normal Ertib", tag: ["fasting", "fast-food", "vegan"], imgSrc: "assets/img/photo_2021-02-04_21-56-04.jpg", rating: 5, price: 25.00},
+    { id: 8, foodName: "Ertib with avocado", tag: ["fasting", "vegan", "fast-food"], imgSrc: "assets/img/photo_2021-02-04_21-56-04.jpg", rating: 5, price: 35.00},
+    { id: 9, foodName: "Ertib with egg", tag: ["fast-food"], imgSrc: "assets/img/photo_2021-02-04_21-56-04.jpg", rating: 5, price: 35.00},
+    { id: 10, foodName: "Ertib with ketchup", tag: ["fasting", "fast-food"], imgSrc: "assets/img/photo_2021-02-04_21-56-04.jpg", rating: 5, price: 30.00},
+    { id: 11, foodName: "Rice", tag: ["fasting", "vegan"], imgSrc: "assets/img/photo_2021-02-04_21-56-04.jpg", rating: 5, price: 30.00},
+    { id: 12, foodName: "Timatim Lebleb", tag: ["fasting", "vegan"], imgSrc: "assets/img/photo_2021-02-04_21-56-04.jpg", rating: 5, price: 30.00},
+    { id: 13, foodName: "Beyaynetu", tag: ["fasting", "vegan", "popular"], imgSrc: "assets/img/photo_2021-02-04_21-56-04.jpg", rating: 5, price: 30.00},
+    { id: 14, foodName: "Kuanta Firfir", tag: ["popular", "meat"], imgSrc: "assets/img/photo_2021-02-04_21-56-04.jpg", rating: 5, price: 40.00},
+    { id: 15, foodName: "Tibs", tag: ["meat"], imgSrc: "assets/img/photo_2021-02-04_21-56-04.jpg", rating: 5, price: 50.00},
+    { id: 16, foodName: "Enkulal", tag: ["popular"], imgSrc: "assets/img/photo_2021-02-04_21-56-04.jpg", rating: 5, price: 35.00},
+    { id: 17, foodName: "Special", tag: [], imgSrc: "assets/img/photo_2021-02-04_21-56-04.jpg", rating: 5, price: 60.00},
 ];
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -37,6 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
         var usersStore = db.createObjectStore('users', {keyPath: 'id'});
         usersStore.createIndex('userName', 'userName', {unique: false});
         usersStore.createIndex('password', 'password', {unique: false});
+        usersStore.createIndex('favorites', 'favorites', {unique: false});
 
     }
 
@@ -62,11 +78,11 @@ document.addEventListener('DOMContentLoaded', () => {
         var foodStore = foodTransaction.objectStore('foods');
         for(let i = 0; i < foodList.length ; i++) {
             var request = foodStore.put(foodList[i]);
-          };
-      
-          foodTransaction.oncomplete = function() {
-            console.log('Food table Populated');
-          };
+        };
+
+        foodTransaction.oncomplete = function() {
+        // console.log('Food table Populated');
+        };
     };
 
     function populateUserData() {
@@ -77,7 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
         };
     
         userTransaction.oncomplete = function() {
-          console.log('User table Populated');
+        //   console.log('User table Populated');
         };
 
     }
