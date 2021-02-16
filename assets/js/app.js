@@ -1,8 +1,8 @@
 var db;
 
 var users = [
-    { id: 1, userName: "John Doe", password: "123", favorites: [1, 2] },
-    { id: 2, userName: "Jane Doe", password: "456", favorites: [4, 5, 6, 2, 9, 11]},
+    { id: 1, userName: "John Doe", password: "123", favorites: [1, 2], phoneNumber: '0900010203' },
+    { id: 2, userName: "Jane Doe", password: "456", favorites: [4, 5, 6, 2, 9, 11], phoneNumber: '0901020304'},
 ];
 
 var foodList = [
@@ -48,10 +48,11 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log('Error loading database.');
         };
 
-        var usersStore = db.createObjectStore('users', {keyPath: 'id'});
+        var usersStore = db.createObjectStore('users', {keyPath: 'id', autoIncrement: true});
         usersStore.createIndex('userName', 'userName', {unique: false});
         usersStore.createIndex('password', 'password', {unique: false});
         usersStore.createIndex('favorites', 'favorites', {unique: false});
+        usersStore.createIndex('phoneNumber', 'phoneNumber', {unique: false});
 
     }
 
@@ -62,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log('Error loading database.');
         };
 
-        var foodStore = db.createObjectStore('foods', {keyPath: 'id'});
+        var foodStore = db.createObjectStore('foods', {keyPath: 'id', autoIncrement: true});
         foodStore.createIndex('foodName', 'foodName', {unique: false});
         foodStore.createIndex('imgSrc', 'imgSrc', {unique: false});
         foodStore.createIndex('rating', 'rating', {unique: false});

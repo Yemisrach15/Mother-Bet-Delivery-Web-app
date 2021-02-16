@@ -1,6 +1,5 @@
 const form = document.getElementById('form');
 const username = document.getElementById('username');
-const email = document.getElementById('email');
 const password = document.getElementById('password');
 const password2 = document.getElementById('password2');
 const phone = document.getElementById('phone');
@@ -8,9 +7,43 @@ const phone = document.getElementById('phone');
 form.addEventListener('submit', (e)=> {
     e.preventDefault();
     checkInputs();
+    if (username.parentElement.className == 'form-control success' && 
+        email.parentElement.className == 'form-control success' && 
+        password.parentElement.className == 'form-control success' &&
+        password2.parentElement.className == 'form-control success' &&
+        phone.parentElement.className == 'form-control success') {
+            console.log('form success');
+
+            let userDatabase;
+            let userDB = indexedDB.open('users', 1);
+            userDB.onsuccess = function() {
+                userDatabase = userDB.result;
+                let transaction = userDatabase.transaction(['users'], 'readwrite');
+                let userStore = transaction.objectStore('users');
+                
+                let newUser = {
+                    userName: username.value.trim(), 
+                    password: password.value.trim(), 
+                    favorites: [], 
+                    phoneNumber: phone.value.trim()
+                }
+
+                let addUserRequest = userStore.add(newUser);
+                addUserRequest.onsuccess = () => {
+                    form.reset();
+                }
+                transaction.oncomplete = () => {
+                    console.log('new user added');
+                }
+                transaction.onerror = () => {
+                    console.log('There was an error adding new user');
+                }
+            }
+        }
 });
 
 function checkInputs(){
+
     const usernamevalue = username.value.trim();
     const emailvalue = email.value.trim();
     const passwordvalue = password.value.trim();
