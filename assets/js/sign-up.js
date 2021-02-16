@@ -3,16 +3,17 @@ const username = document.getElementById('username');
 const password = document.getElementById('password');
 const password2 = document.getElementById('password2');
 const phone = document.getElementById('phone');
+const signUpSuccess = document.querySelector('.signUp-success');
  
 form.addEventListener('submit', (e)=> {
     e.preventDefault();
     checkInputs();
-    if (username.parentElement.className == 'form-control success' && 
-        email.parentElement.className == 'form-control success' && 
+    if (username.parentElement.className == 'form-control success' &&  
         password.parentElement.className == 'form-control success' &&
         password2.parentElement.className == 'form-control success' &&
         phone.parentElement.className == 'form-control success') {
             console.log('form success');
+            signUpSuccess.textContent = 'You have successfully signed up';
 
             let userDatabase;
             let userDB = indexedDB.open('users', 1);
@@ -30,7 +31,9 @@ form.addEventListener('submit', (e)=> {
 
                 let addUserRequest = userStore.add(newUser);
                 addUserRequest.onsuccess = () => {
-                    form.reset();
+                    setTimeout(() => {
+                        form.submit();
+                    }, 1000);
                 }
                 transaction.oncomplete = () => {
                     console.log('new user added');
@@ -39,13 +42,12 @@ form.addEventListener('submit', (e)=> {
                     console.log('There was an error adding new user');
                 }
             }
-        }
+    }
 });
 
 function checkInputs(){
 
     const usernamevalue = username.value.trim();
-    const emailvalue = email.value.trim();
     const passwordvalue = password.value.trim();
     const password2value = password2.value.trim();
     const phonenumber = phone.value.trim();
@@ -55,14 +57,6 @@ function checkInputs(){
     } else {
 
         setSuccessFor(username);
-    }
-
-    if(emailvalue === ''){
-        setErrorFor(email, "Email cannot be blank");
-    }else if (!isEmail(emailvalue)){
-        setErrorFor(email, "email is not valid");
-    }else{
-        setSuccessFor(email)
     }
 
     if(passwordvalue === ''){
@@ -87,21 +81,16 @@ function checkInputs(){
     }
 }
 
-    function setErrorFor(input, message){
-        const formControl  = input.parentElement;
-        const small = formControl.querySelector(`small`);
+function setErrorFor(input, message){
+    const formControl  = input.parentElement;
+    const small = formControl.querySelector(`small`);
 
-        small.innerText = message;
-        formControl.className = 'form-control error';
-    }
+    small.innerText = message;
+    formControl.className = 'form-control error';
+}
 
 
-    function setSuccessFor(input){
-        const formControl = input.parentElement;
-        formControl.className = 'form-control success'
-    }
-
-    function isEmail(email) {
-        const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-        return re.test(String(email).toLowerCase());
-    }
+function setSuccessFor(input){
+    const formControl = input.parentElement;
+    formControl.className = 'form-control success'
+}
