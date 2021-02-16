@@ -1,14 +1,14 @@
 var db;
 
 var users = [
-    { id: 1, userName: "John Doe", password: "123", favorites: [1, 2] },
-    { id: 2, userName: "Jane Doe", password: "456", favorites: [4, 5, 6, 2, 9, 11]},
+    { id: 1, userName: "John Doe", password: "123", favorites: [1, 2], phoneNumber: '0900010203' },
+    { id: 2, userName: "Jane Doe", password: "456", favorites: [4, 5, 6, 2, 9, 11], phoneNumber: '0901020304'},
 ];
 
 var foodList = [
     { id: 1, foodName: "Ertib", tag: ["fasting", "fast-food", "popular"], imgSrc: "assets/img/photo_2021-02-04_21-56-04.jpg", rating: 5, price: 25.00}, 
     { id: 2, foodName: "Firfir", tag: ["fasting", "popular"], imgSrc: "assets/img/photo_2021-02-04_21-56-10.jpg", rating: 4, price: 20.00}, 
-    { id: 3, foodName: "Pasta", tag: [], imgSrc: "assets/img/photo_2021-02-04_21-56-04.jpg", rating: 5, price: 30.00}, 
+    { id: 3, foodName: "Pasta", tag: ["vegan"], imgSrc: "assets/img/photo_2021-02-04_21-56-04.jpg", rating: 5, price: 30.00}, 
     { id: 4, foodName: "Pasta with veggies", tag: ["fasting", "vegan"], imgSrc: "assets/img/photo_2021-02-04_21-56-04.jpg", rating: 5, price: 35.00},
     { id: 5, foodName: "Shiro", tag: ["fasting", "popular", "vegan"], imgSrc: "assets/img/photo_2021-02-04_21-56-04.jpg", rating: 5, price: 30.00},
     { id: 6, foodName: "Tegabino", tag: ["fasting", "vegan"], imgSrc: "assets/img/photo_2021-02-04_21-56-04.jpg", rating: 5, price: 35.00},
@@ -27,7 +27,6 @@ var foodList = [
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    // create the database
     let userDB = indexedDB.open('users', 1);
     
     userDB.onsuccess = function() {
@@ -49,10 +48,11 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log('Error loading database.');
         };
 
-        var usersStore = db.createObjectStore('users', {keyPath: 'id'});
+        var usersStore = db.createObjectStore('users', {keyPath: 'id', autoIncrement: true});
         usersStore.createIndex('userName', 'userName', {unique: false});
         usersStore.createIndex('password', 'password', {unique: false});
         usersStore.createIndex('favorites', 'favorites', {unique: false});
+        usersStore.createIndex('phoneNumber', 'phoneNumber', {unique: false});
 
     }
 
@@ -63,12 +63,13 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log('Error loading database.');
         };
 
-        var foodStore = db.createObjectStore('foods', {keyPath: 'id'});
+        var foodStore = db.createObjectStore('foods', {keyPath: 'id', autoIncrement: true});
         foodStore.createIndex('foodName', 'foodName', {unique: false});
         foodStore.createIndex('imgSrc', 'imgSrc', {unique: false});
         foodStore.createIndex('rating', 'rating', {unique: false});
         foodStore.createIndex('price', 'price', {unique: false});
-        foodStore.createIndex('description', 'description', {unique: false});
+        foodStore.createIndex('tag', 'tag', {unique: false});
+
 
     }
 

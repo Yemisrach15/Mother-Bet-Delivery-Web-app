@@ -22,7 +22,7 @@ integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9If
 
 
     <nav class="navbar navbar-expand-md navbar-dark dark-bg">
-        <a href="user-index.html" class="navbar-brand">Mother Bet Delivery</a>
+        <a href="user-index.html" class="navbar-brand user-index">Mother Bet Delivery</a>
         <button class="navbar-toggler" type="button" 
         data-toggle="collapse" data-target="#colNav"
         aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -32,14 +32,14 @@ integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9If
         <div class="collapse navbar-collapse" id="colNav">
             <ul>
             
-                <li class="nav-item"><a class="nav-link" href="user-contact.html">Contact</a></li>
-                <li class="nav-item"><a class="nav-link" href="user-about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link user-contact" href="user-contact.html">Contact</a></li>
+                <li class="nav-item"><a class="nav-link user-about" href="user-about.html">About</a></li>
                 <div>
                     <li class="nav-item color-orange  "role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false ">
                         <i class="fa fa-user-circle a fa-2x" aria-hidden="true"></i>
                     </li>
                     <div class="dropdown-menu  dropdown-menu-right" aria-labelledby="dropdownMenuLink">
-                        <h5 class="dropdown-item" > [user-name] </h5>
+                        <h5 class="dropdown-item" id="user-name"> [user-name] </h5>
                         <a class="dropdown-item" href="#">
                             <i class="fa fa-heart-o color-orange mr-3" aria-hidden="true"></i>
                             My list
@@ -49,7 +49,7 @@ integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9If
 
                             Edit profile
                         </a>
-                        <a class="dropdown-item" href="#">
+                        <a class="dropdown-item" href="log-in.html">
                             <i class="fa fa-sign-out color-orange mr-3" aria-hidden="true"></i>
                             Sign out
                         </a>
@@ -203,7 +203,9 @@ integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9If
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
         
+        <!-- custom js -->
         <script src="assets/js/app.js"></script>
+        <script src="assets/js/user-contact.js"></script>
 
     </body>
 </html>
