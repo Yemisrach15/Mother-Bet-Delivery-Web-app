@@ -118,7 +118,7 @@ footer ul li i{
 .color-dark{
     color: #313643;
 }
-.color-orange{
+.color-orange, .color-orange i{
     color: #ff6700;
 }
 .color-red{
