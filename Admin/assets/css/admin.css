@@ -16,10 +16,10 @@ a:hover{
 
 /* navigation section */
 .navbar{
-    background-color: rgb(21, 53, 233);
+    background-color: rgb(70, 95, 238);
     padding: 1em 2em 1em 2.5em;
-    /* padding-top: 6rem;
-    padding-bottom: 10rem; */
+    padding-top: 6rem;
+    padding-bottom: 10rem;
 }
 .navbar-brand {
     color: #ff6700 !important;
@@ -38,7 +38,7 @@ a:hover{
 }
 .nav-link{
     padding: .5em 1.5em .5em 0;
-    /* padding-top: 3rem; */
+    padding-top: 3rem;
 }
 nav ul {
     /* display: flex;
@@ -61,6 +61,20 @@ nav ul li a {
     height: auto;
 }
 
+
+
+.crd1{
+    background-color: rgb(180, 120, 236);
+    list-style: none;
+}
+.crd2{
+    background-color: rgb(236, 159, 236);
+    list-style: none;
+}
+.crd3{
+    background-color: rgb(226, 100, 68);
+    list-style: none;
+}
 
 
 /* Responsive layout */
