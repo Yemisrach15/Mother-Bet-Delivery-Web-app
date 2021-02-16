@@ -6,7 +6,7 @@
     <title>Mother Bet Delivery </title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- <link rel="stylesheet" href="assets/css/basics.css"> -->
+    <link rel="stylesheet" href="assets/css/basics.css">
     <link rel="stylesheet" href="assets/css/index.css">
     <link rel="stylesheet" href="assets/css/user-index.css">
     <link rel="stylesheet" href="assets/css/menu.css">
@@ -33,7 +33,7 @@
 <body>
     
     <nav class="navbar navbar-expand-md navbar-dark dark-bg">
-        <a href="user-index.html" class="navbar-brand">Mother Bet Delivery</a>
+        <a href="user-index.html" class="navbar-brand user-index">Mother Bet Delivery</a>
         <button class="navbar-toggler" type="button" 
         data-toggle="collapse" data-target="#colNav"
         aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -43,8 +43,8 @@
         <div class="collapse navbar-collapse" id="colNav">
             <ul>
             
-                <li class="nav-item"><a class="nav-link" href="user-contact.html">Contact</a></li>
-                <li class="nav-item"><a class="nav-link" href="user-about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link user-contact" href="user-contact.html">Contact</a></li>
+                <li class="nav-item"><a class="nav-link user-about" href="user-about.html">About</a></li>
                 <div>
                     <li class="nav-item color-orange  "role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false ">
                         <i class="fa fa-user-circle a fa-2x" aria-hidden="true"></i>
@@ -59,7 +59,7 @@
                             <i class="fa fa-address-card-o color-orange mr-3" aria-hidden="true"></i>
                             Edit profile
                         </a>
-                        <a class="dropdown-item" href="#">
+                        <a class="dropdown-item" href="log-in.html">
                             <i class="fa fa-sign-out color-orange mr-3" aria-hidden="true"></i>
                             Sign out
                         </a>
@@ -117,63 +117,11 @@
         <div class=" text-center mb-5">
           <h2>Your <span class="color-orange">Orders</span> </h2>
         </div> 
-        <div class="list-group-flush">
-          <li class="list-group-item list-group-item-action flex-column ">
-
-            <div class="d-flex w-100">
-              <div>Food name</div>
-              <div  class="ml-auto d-flex">
-                <div class="mr-2 border-right">  1
-                  <button class="btn b-none"><i class="fa fa-minus color-orange" aria-hidden="true"></i></button>
-                  <button class="btn b-none"><i class="fa fa-plus color-orange" aria-hidden="true"></i></button>
-                </div>
-                <div class="mr-2 border-right text-center p-2">112 birr </div>
-                <button class="btn b-none"><i class="fa fa-minus-circle color-red" aria-hidden="true"></i></button>
-                </div>
-              </div>
-          </li> 
-          <li class="list-group-item list-group-item-action flex-column ">
-
-            <div class="d-flex w-100">
-              <div>Food name</div>
-              <div  class="ml-auto d-flex">
-                <div class="mr-2 border-right">  1
-                  <button class="btn b-none"><i class="fa fa-minus color-orange" aria-hidden="true"></i></button>
-                  <button class="btn b-none"><i class="fa fa-plus color-orange" aria-hidden="true"></i></button>
-                </div>
-                <div class="mr-2 border-right text-center p-2">112 birr </div>
-                <button class="btn b-none"><i class="fa fa-minus-circle color-red" aria-hidden="true"></i></button>
-                </div>
-              </div>
-          </li> 
-          <li class="list-group-item list-group-item-action flex-column ">
-
-            <div class="d-flex w-100">
-              <div>Food name</div>
-              <div  class="ml-auto d-flex">
-                <div class="mr-2 border-right">  1
-                  <button class="btn b-none"><i class="fa fa-minus color-orange" aria-hidden="true"></i></button>
-                  <button class="btn b-none"><i class="fa fa-plus color-orange" aria-hidden="true"></i></button>
-                </div>
-                <div class="mr-2 border-right text-center p-2">112 birr </div>
-                <button class="btn b-none"><i class="fa fa-minus-circle color-red" aria-hidden="true"></i></button>
-                </div>
-              </div>
-          </li>
-          <li class="list-group-item list-group-item-action flex-column ">
-
-            <div class="d-flex w-100">
-              <div>Food name</div>
-              <div  class="ml-auto d-flex">
-                <div class="mr-2 border-right">  1
-                  <button class="btn b-none"><i class="fa fa-minus color-orange" aria-hidden="true"></i></button>
-                  <button class="btn b-none"><i class="fa fa-plus color-orange" aria-hidden="true"></i></button>
-                </div>
-                <div class="mr-2 border-right text-center p-2">112 birr </div>
-                <button class="btn b-none"><i class="fa fa-minus-circle color-red" aria-hidden="true"></i></button>
-                </div>
-              </div>
-          </li>
+        <div class="list-group-flush checkout-box">
+          <ul>
+            <!-- chosen food-item goes here -->
+          </ul>
+          
           <li class="list-group-item list-group-item-action flex-column text-center ">
             <button class=" btn btn-orange ">Check Out</button>
           </li>
@@ -284,8 +232,8 @@
 <!-- custom js -->
 
     <script src="assets/js/app.js"></script>
-    <script src="assets/js/menu.js"></script>
     <script src="assets/js/logged-in.js"></script>
+    <script src="assets/js/checkout.js"></script>
 
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>

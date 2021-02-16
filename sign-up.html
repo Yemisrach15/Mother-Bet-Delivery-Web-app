@@ -45,20 +45,13 @@ crossorigin="anonymous">
 
     <div id="signup">
         <div class="container">
-            <div class="header">
+            <div class="header text-center">
                 <h2>SignUp</h2>
             </div>
-            <form class="form" id="form">
+            <form class="form" id="form" action="log-in.html">
                 <div class="form-control" >
                     <label>Username</label>
                     <input type="text" id="username" placeholder="Enter username:">
-                    <i class="fa fa-check-circle"></i>
-                    <i class="fa fa-exclamation-circle"></i>
-                    <small>Invalid input!</small>
-                </div>
-                <div class="form-control">
-                    <label>Email</label>
-                    <input type="email" id="email" placeholder="Enter Email address:">
                     <i class="fa fa-check-circle"></i>
                     <i class="fa fa-exclamation-circle"></i>
                     <small>Invalid input!</small>
@@ -84,8 +77,11 @@ crossorigin="anonymous">
                     <i class="fa fa-exclamation-circle"></i>
                     <small>Invalid input!</small>
                 </div>
+                <br>
+                <div class="signUp-success text-center"></div>
+                <br>
                 <button>SignUp</button>
-                <div class="foot"> <a class="nav-link" href="log-in.html"><label for="tab-1">Already Member?</label></a> </div>
+                <div class="foot"> <a class="color-orange" href="log-in.html"><label for="tab-1">Already Member?</label></a> </div>
             </form> 
         </div>
         

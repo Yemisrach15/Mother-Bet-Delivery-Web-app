@@ -92,5 +92,10 @@ body {
     padding: 10px;
     width: 50%;
 }
-
+.signUp-success{
+    color: #2ecc71;
+}
+.color-orange label{
+    color: #ff6700;
+}
 
