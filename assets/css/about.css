@@ -1,31 +1,32 @@
 body{
-    margin-right: 10px;
-    margin-left: 10px;
-    background: rgba(14, 12, 32, 0.822);;
+    margin: 0%;
+    /* margin-left: 15px;  */
+
+    /* background: rgba(14, 12, 32, 0.822); */
 }
-.bag{
+
+.abt1{
     background-color: rgba(14, 12, 32, 0.822);
 }
 .txt{
-    color: white;
-    font-size: 2rem;
+   font-size: 2rem;
 }
-.txt1{
-    color: white;
-}
+
 .MBD{
     font-family: 'Xanh Mono', monospace;
     font-size: 5rem;
     text-align: center;
     padding-top: 3rem;
     padding-bottom: 5rem;
+    
 }
 .foodimg{
     padding-left: 20rem;
+    height: 30rem;
 }
 .p1{
     font-size: 15px;
-    color: white;
+    
 }
 .last{
     padding-top: 5rem;
@@ -42,3 +43,53 @@ body{
     padding-left: 3rem;
     padding-right: 3rem;
 }
+.main1{
+    /* margin-left: 3rem; */
+    margin-right: 3rem;
+
+}
+
+.c1{
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 8px solid #ff6600ee;
+  border-radius: 50%;
+  font-size: 30px;
+  color: #000;
+  }
+.c2{
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 8px solid #ff6600ee;
+  border-radius: 50%;
+  font-size: 30px;
+  color: #000;
+}
+.c3{
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 8px solid #ff6600ee;
+  border-radius: 50%;
+  font-size: 30px;
+  color: #000;
+}
+.circle{
+  margin: 3rem;
+  margin-left: 5rem;
+  align-items: center;
+}
+.circle a:hover{
+  color: #ff6600ee;
+
+}
+
+
