@@ -9,6 +9,11 @@
 body {
     background: #2a2f3b;
 }
+
+.a-white{
+    color: white;
+    
+}
 a:hover{
     text-decoration: none;
 }
@@ -115,6 +120,9 @@ footer ul li i{
 }
 .color-orange{
     color: #ff6700;
+}
+.color-red{
+    color: #C70000;
 }
 .btn-orange{
     background-color: #FF6700;
