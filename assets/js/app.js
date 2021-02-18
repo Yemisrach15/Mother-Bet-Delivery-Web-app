@@ -7,7 +7,7 @@ var users = [
 
 var foodList = [
     { id: 1, foodName: "Ertib", tag: ["fasting", "fast-food", "popular"], imgSrc: "assets/img/photo_2021-02-04_21-56-04.jpg", rating: 5, price: 25.00}, 
-    { id: 2, foodName: "Firfir", tag: ["fasting", "popular"], imgSrc: "assets/img/photo_2021-02-04_21-56-10.jpg", rating: 4, price: 20.00}, 
+    { id: 2, foodName: "Firfir", tag: ["fasting", "popular"], imgSrc: "assets/img/photo_2021-02-04_21-56-13.jpg", rating: 4, price: 20.00}, 
     { id: 3, foodName: "Pasta", tag: ["vegan"], imgSrc: "assets/img/photo_2021-02-04_21-56-04.jpg", rating: 5, price: 30.00}, 
     { id: 4, foodName: "Pasta with veggies", tag: ["fasting", "vegan"], imgSrc: "assets/img/photo_2021-02-04_21-56-04.jpg", rating: 5, price: 35.00},
     { id: 5, foodName: "Shiro", tag: ["fasting", "popular", "vegan"], imgSrc: "assets/img/photo_2021-02-04_21-56-04.jpg", rating: 5, price: 30.00},
