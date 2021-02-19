@@ -1,242 +1,246 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mother Bet Delivery </title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/css/basics.css">
-    <link rel="stylesheet" href="assets/css/index.css">
-    <link rel="stylesheet" href="assets/css/user-index.css">
-    <link rel="stylesheet" href="assets/css/menu.css">
-    <style>
-      /* .fav-slides {display:none;} */
-      </style>
-      <script>
-        var myIndex = 0;
-        carousel();
-        
-        function carousel() {
-          var i;
-          var x = document.getElementsByClassName("fav-img");
-          for (i = 0; i < x.length; i++) {
-            x[i].style.display = "none";  
-          }
-          myIndex++;
-          if (myIndex > x.length) {myIndex = 1}    
-          x[myIndex-1].style.display = "block";  
-          setTimeout(carousel, 2000); // Change image every 2 seconds
-        }
-        </script>
-  </head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Mother Bet Delivery </title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="assets/css/basics.css">
+		<link rel="stylesheet" href="assets/css/index.css">
+		<link rel="stylesheet" href="assets/css/menu.css">
+		<link rel="stylesheet" href="assets/css/user-index.css">
+	
+		<style>
+			/* .fav-slides {display:none;} */
+			</style>
+			<script>
+				var myIndex = 0;
+				carousel();
+				
+				function carousel() {
+					var i;
+					var x = document.getElementsByClassName("fav-img");
+					for (i = 0; i < x.length; i++) {
+						x[i].style.display = "none";  
+					}
+					myIndex++;
+					if (myIndex > x.length) {myIndex = 1}    
+					x[myIndex-1].style.display = "block";  
+					setTimeout(carousel, 2000); // Change image every 2 seconds
+				}
+				</script>
+	</head>
 <body>
-    
-    <nav class="navbar navbar-expand-md navbar-dark dark-bg">
-        <a href="user-index.html" class="navbar-brand user-index">Mother Bet Delivery</a>
-        <button class="navbar-toggler" type="button" 
-        data-toggle="collapse" data-target="#colNav"
-        aria-controls="navbarSupportedContent" aria-expanded="false"
-        aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="colNav">
-            <ul>
-            
-                <li class="nav-item"><a class="nav-link user-contact" href="user-contact.html">Contact</a></li>
-                <li class="nav-item"><a class="nav-link user-about" href="user-about.html">About</a></li>
-                <div>
-                    <li class="nav-item color-orange  "role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false ">
-                        <i class="fa fa-user-circle a fa-2x" aria-hidden="true"></i>
-                    </li>
-                    <div class="dropdown-menu  dropdown-menu-right" aria-labelledby="dropdownMenuLink">
-                        <h5 class="dropdown-item" id="user-name"> [user-name] </h5>
-                        <a class="dropdown-item" href="#">
-                            <i class="fa fa-heart-o color-orange mr-3" aria-hidden="true"></i>
-                            My list
-                        </a>
-                        <a class="dropdown-item" href="#">
-                            <i class="fa fa-address-card-o color-orange mr-3" aria-hidden="true"></i>
-                            Edit profile
-                        </a>
-                        <a class="dropdown-item" href="log-in.html">
-                            <i class="fa fa-sign-out color-orange mr-3" aria-hidden="true"></i>
-                            Sign out
-                        </a>
-                    </div>  
-                </div>
-                
-            </ul>
-        </div>
-    
-    </nav>
+		
+		<nav class="navbar navbar-expand-md navbar-dark dark-bg">
+				<a href="user-index.html" class="navbar-brand user-index">Mother Bet Delivery</a>
+				<button class="navbar-toggler" type="button" 
+				data-toggle="collapse" data-target="#colNav"
+				aria-controls="navbarSupportedContent" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="colNav">
+						<ul>
+						
+								<li class="nav-item"><a class="nav-link user-contact" href="user-contact.html">Contact</a></li>
+								<li class="nav-item"><a class="nav-link user-about" href="user-about.html">About</a></li>
+								<div>
+										<li class="nav-item color-orange  "role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false ">
+												<i class="fa fa-user-circle a fa-2x" aria-hidden="true"></i>
+										</li>
+										<div class="dropdown-menu  dropdown-menu-right" aria-labelledby="dropdownMenuLink">
+												<h5 class="dropdown-item" id="user-name"> [user-name] </h5>
+												<a class="dropdown-item" href="#">
+														<i class="fa fa-heart-o color-orange mr-3" aria-hidden="true"></i>
+														My list
+												</a>
+												<a class="dropdown-item" href="#">
+														<i class="fa fa-address-card-o color-orange mr-3" aria-hidden="true"></i>
+														Edit profile
+												</a>
+												<a class="dropdown-item" href="log-in.html">
+														<i class="fa fa-sign-out color-orange mr-3" aria-hidden="true"></i>
+														Sign out
+												</a>
+										</div>  
+								</div>
+								
+						</ul>
+				</div>
+		
+		</nav>
 
 
 
 <!-- favorites and checkout section start -->
-    <div class="fav-check row">
-      <!-- favorites - start -->
-      <section class="favorites col-md-7 p-5 flex-column">
-        <div class=" text-center mb-5">
-          <h2>Your <span class="color-orange">Favorites</span> </h2>
-        </div> 
-        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(15).jpg "
-                alt="First slide">
-            </div>
-            <div class="carousel-item">
-              <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(16).jpg"
-                alt="Second slide">
-            </div>
-            <div class="carousel-item">
-              <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(17).jpg"
-                alt="Third slide">
-            </div>
-          </div>
-          <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a>
-        </div>
-        <!-- not working -->
-        <!-- <div class= "fav-slides" style="max-width:500px">
-          <img class="fav-img" src="assets/img/img beyaynet.jfif" style="width:100%">
-          <img class="fav-img" src="assets/img/imgTegabino2.jfif" style="width:100%">
-          <img class="fav-img" src="assets/img/images.jpg" style="width:100%">
-        </div> -->
-      </section> 
-      <!-- favorites - end  -->
-      <!-- checkout - start -->
-      <section  class="p-5 col-md-5 fixed checkout">
-        <div class=" text-center mb-5">
-          <h2>Your <span class="color-orange">Orders</span> </h2>
-        </div> 
-        <div class="list-group-flush checkout-box">
-          <ul>
-            <!-- chosen food-item goes here -->
-          </ul>
-          
-          <li class="list-group-item list-group-item-action flex-column text-center ">
-            <button class=" btn btn-orange ">Check Out</button>
-          </li>
-          
-        </div>
-      </section>
-      <!-- checkout - end  -->
-       
-    </div>
-    
-    
+		<div class="fav-check row">
+			<!-- favorites - start -->
+			<section class="favorites col-md-7 p-5 flex-column">
+				<div class=" text-center mb-5">
+					<h2>Your <span class="color-orange">Favorites</span> </h2>
+				</div> 
+				<div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+					<div class="carousel-inner">
+						<div class="carousel-item active">
+							<img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(15).jpg "
+								alt="First slide">
+							<div class="carousel-caption d-md-block">
+								<h5>Food Name</h5>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(16).jpg"
+								alt="Second slide">
+						</div>
+						<div class="carousel-item">
+							<img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(17).jpg"
+								alt="Third slide">
+						</div>
+					</div>
+					<a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span class="sr-only">Previous</span>
+					</a>
+					<a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="sr-only">Next</span>
+					</a>
+				</div>
+				<!-- not working -->
+				<!-- <div class= "fav-slides" style="max-width:500px">
+					<img class="fav-img" src="assets/img/img beyaynet.jfif" style="width:100%">
+					<img class="fav-img" src="assets/img/imgTegabino2.jfif" style="width:100%">
+					<img class="fav-img" src="assets/img/images.jpg" style="width:100%">
+				</div> -->
+			</section> 
+			<!-- favorites - end  -->
+			<!-- checkout - start -->
+			<section  class="p-5 col-md-5 fixed checkout">
+				<div class=" text-center mb-5">
+					<h2>Your <span class="color-orange">Orders</span> </h2>
+				</div> 
+				<div class="list-group-flush checkout-box">
+					<ul>
+						<!-- chosen food-item goes here -->
+					</ul>
+					
+					<li class="list-group-item list-group-item-action flex-column text-center ">
+						<button class=" btn btn-orange checkout-btn">Check Out</button>
+					</li>
+					
+				</div>
+			</section>
+			<!-- checkout - end  -->
+			 
+		</div>
+		
+		
 <!-- favorites section cart end -->
 
 <!-- menu and order section start -->
-    <section class=" white-bg  row ">
+		<section class=" white-bg  row ">
 <!-- menu column start -->
-        <div class="col-lg-8">
-            <div class=" container">
-                <h2 class=" col-12 color-orange text-center mb-5"> Menus </h2>
-            
-            <!-- filters -->
-                <div class="filters">
-                <ul >
-                  <li><button class="active-filter filter-btn" type="button">All</button></li>
-                  <li><button class="filter-btn">Popular</button></li>
-                  <li><button class="filter-btn">Fasting</button></li>
-                  <li><button class="filter-btn">Vegan</button></li>
-                  <li><button class="filter-btn">Fast-food</button></li>
-                  <li><button class="filter-btn">Meat</button></li>
-                </ul>
-                </div>
-                <!-- cards for each food on menu -->
-                <div class="cards row">
-                </div> 
-            </div>
-        </div>
+				<div class="col-lg-8">
+						<div class=" container">
+								<h2 class=" col-12 color-orange text-center mb-5"> Menus </h2>
+						
+						<!-- filters -->
+								<div class="filters">
+								<ul >
+									<li><button class="active-filter filter-btn" type="button">All</button></li>
+									<li><button class="filter-btn">Popular</button></li>
+									<li><button class="filter-btn">Fasting</button></li>
+									<li><button class="filter-btn">Vegan</button></li>
+									<li><button class="filter-btn">Fast-food</button></li>
+									<li><button class="filter-btn">Meat</button></li>
+								</ul>
+								</div>
+								<div class="cards row">
+									<!-- cards for each food on menu go here-->
+								</div> 
+						</div>
+				</div>
 <!-- menu column end-->
 
 <!-- How to Order column - start -->
-        <div class="how-to col-lg-4 mb-4">
-            <div class="container dark-bg">
-                
-                <h2 class="color-gray text-center pt-3 mb-5"> <span class="color-orange" >?</span>  How to Order <span class="color-orange" >?</span>  </h2>
-                <div class="d-flex flex-column">
-                    <div class="box">
-                        <span>01</span>
-                        <h4>Lorem Ipsum</h4>
-                        <p>Ulamco laboris nisi ut aliquip ex ea commodo consequat. Et consectetur ducimus vero placeat</p>
-                    </div>
-                    <div class="box">
-                        <span>02</span>
-                        <h4>Lorem Ipsum</h4>
-                        <p>Ulamco laboris nisi ut aliquip ex ea commodo consequat. Et consectetur ducimus vero placeat</p>
-                    </div>
-                    <div class="box">
-                        <span>03</span>
-                        <h4>Lorem Ipsum</h4>
-                        <p>Ulamco laboris nisi ut aliquip ex ea commodo consequat. Et consectetur ducimus vero placeat</p>
-                    </div>
-                    
-                  </div>
-                </div>
+				<div class="how-to col-lg-4 mb-4">
+						<div class="container dark-bg">
+								
+								<h2 class="color-gray text-center pt-3 mb-5"> <span class="color-orange" >?</span>  How to Order <span class="color-orange" >?</span>  </h2>
+								<div class="d-flex flex-column">
+										<div class="box">
+												<span>01</span>
+												<h4>Lorem Ipsum</h4>
+												<p>Ulamco laboris nisi ut aliquip ex ea commodo consequat. Et consectetur ducimus vero placeat</p>
+										</div>
+										<div class="box">
+												<span>02</span>
+												<h4>Lorem Ipsum</h4>
+												<p>Ulamco laboris nisi ut aliquip ex ea commodo consequat. Et consectetur ducimus vero placeat</p>
+										</div>
+										<div class="box">
+												<span>03</span>
+												<h4>Lorem Ipsum</h4>
+												<p>Ulamco laboris nisi ut aliquip ex ea commodo consequat. Et consectetur ducimus vero placeat</p>
+										</div>
+										
+									</div>
+								</div>
 
-            </div>
-        </div>
-    </section>
+						</div>
+				</div>
+		</section>
 <!-- How to Order column - end-->
 
 <!-- menu section - end -->
 
 
 <!-- footer - start -->
-    <footer>
-      <div class="row">
-          <div class="col-md-2 col-sm-12">
-              <h5>Quick Links</h5>
-              <ul>
-                  <li><a class="hover-orange" href="index.html"><i class="fa fa-cutlery mr-2" aria-hidden="true"></i>Home</a></li>
-                  <li><a class="hover-orange" href="#"><i class="fa fa-cutlery mr-2" aria-hidden="true"></i>FAQ</a></li>
-                  <li><a class="hover-orange" href="about.html"><i class="fa fa-cutlery mr-2" aria-hidden="true"></i>About</a></li>
-              </ul>
-          </div>
-          <div class="col-md-3 col-sm-12">
-              <h5>Delivery Locations</h5>
-              <ul>
-                  <li class="hover-orange">Natural Science Faculty</li>
-                  <li class="hover-orange">Main Campus</li>
-                  <li class="hover-orange">Institute of Technology</li>
-                  <li class="hover-orange">College of Business and Economics</li>
-              </ul>
-          </div>
-          <div class="col-md-3 col-sm-12">
-              <h5>Contact</h5>
-              <ul>
-                  <li><i class="fa fa-phone"></i><a class="hover-orange" href="tel:+251 900 01 02 03">+251 900 01 02 03</a></li>
-                  <li><i class="fa fa-envelope"></i><a class="hover-orange" href="mailto:contact@MotherBetDelivery.com">info@MBD.com</a></li>
-                  <li><i class="fa fa-telegram"></i><a class="hover-orange" href="">MotherBetDelivery</a></li>
-              </ul>
-          </div>
-      </div>
-      <hr>
-      <div class="copyright">
-          <p>&copy; Copyright 2021 Mother Bet Delivery.</p>
-      </div>
-    </footer>
+		<footer>
+			<div class="row">
+					<div class="col-md-2 col-sm-12">
+							<h5>Quick Links</h5>
+							<ul>
+									<li><a class="hover-orange" href="index.html"><i class="fa fa-cutlery mr-2" aria-hidden="true"></i>Home</a></li>
+									<li><a class="hover-orange" href="#"><i class="fa fa-cutlery mr-2" aria-hidden="true"></i>FAQ</a></li>
+									<li><a class="hover-orange" href="about.html"><i class="fa fa-cutlery mr-2" aria-hidden="true"></i>About</a></li>
+							</ul>
+					</div>
+					<div class="col-md-3 col-sm-12">
+							<h5>Delivery Locations</h5>
+							<ul>
+									<li class="hover-orange">Natural Science Faculty</li>
+									<li class="hover-orange">Main Campus</li>
+									<li class="hover-orange">Institute of Technology</li>
+									<li class="hover-orange">College of Business and Economics</li>
+							</ul>
+					</div>
+					<div class="col-md-3 col-sm-12">
+							<h5>Contact</h5>
+							<ul>
+									<li><i class="fa fa-phone"></i><a class="hover-orange" href="tel:+251 900 01 02 03">+251 900 01 02 03</a></li>
+									<li><i class="fa fa-envelope"></i><a class="hover-orange" href="mailto:contact@MotherBetDelivery.com">info@MBD.com</a></li>
+									<li><i class="fa fa-telegram"></i><a class="hover-orange" href="">MotherBetDelivery</a></li>
+							</ul>
+					</div>
+			</div>
+			<hr>
+			<div class="copyright">
+					<p>&copy; Copyright 2021 Mother Bet Delivery.</p>
+			</div>
+		</footer>
 <!-- footer - end -->
 
 <!-- custom js -->
 
-    <script src="assets/js/app.js"></script>
-    <script src="assets/js/logged-in.js"></script>
-    <script src="assets/js/checkout.js"></script>
+		<script src="assets/js/app.js"></script>
+		<script src="assets/js/logged-in.js"></script> 
+		<script src="assets/js/checkout.js"></script>
 
 
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script></body>
+		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script></body>
 </html>
