@@ -1,5 +1,12 @@
+
 #note{
-    align:left;
+    margin-top: 40px;
+    margin-left: 25px;
+}
+#checkout{
+    margin-left: 25px;
+    font-size: 35px;
+    font-weight: bold;
 }
 /* Dropdown Button */
 .dropbtn {
@@ -22,7 +29,7 @@
     display: inline-block;
   }
   
-  /* Dropdown Content (Hidden by Default) */
+  /* Dropdown Content*/
   .dropdown-content {
     display: none;
     position: absolute;
@@ -42,18 +49,20 @@
   
   /* Change color of dropdown links on hover */
   .dropdown-content a:hover {background-color: #ddd}
-  
-  /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+
   .show {display:block;}
 #table{
     width: 100%;
     display: table;
+    margin-left: 8px;
+    margin-top: 50px;
 }
 .caption{
     display: table-caprion;
     text-align: left;
     font-size: 30px;
     font-weight: bold;
+    margin-top: 30px ;
 }
 #table-header{
     display: table-header-group;
@@ -63,7 +72,20 @@
 }
 .table-header-cell{
     display: table-cell;
-    padding: 10px;
+    padding: 40px;
     text-align: justify;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid rgb(207, 191, 191);
     }
+.resp-table-row{
+        display: table-row;
+    }
+.table-body-cell{
+        display: table-cell;
+    }
+#box{
+    border: 5px solid rgba(221, 106, 11, 0.849);
+    width: 20%;
+    margin-left: 20px;
+    font-weight: bold;
+    text-align: center;
+}
