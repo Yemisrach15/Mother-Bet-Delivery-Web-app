@@ -10,13 +10,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/basics.css">
-    <link rel="stylesheet" href="assets/css/checkout.css" >
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/checkout.css">
 
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-md navbar-dark">
-        <a href="index.html" class="navbar-brand">Mother Bet Delivery</a>
+    <nav class="navbar navbar-expand-md navbar-dark dark-bg">
+        <a href="user-index.html" class="navbar-brand user-index">Mother Bet Delivery</a>
         <button class="navbar-toggler" type="button" 
         data-toggle="collapse" data-target="#colNav"
         aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -25,35 +26,66 @@
         </button>
         <div class="collapse navbar-collapse" id="colNav">
             <ul>
-                <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
-                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="sign-up.html">Sign Up</a></li>
-                <li class="nav-item"><a class="nav-link" href="log-in.html">Log In</a></li>
+            
+                <li class="nav-item"><a class="nav-link user-contact" href="user-contact.html">Contact</a></li>
+                <li class="nav-item"><a class="nav-link user-about" href="user-about.html">About</a></li>
+                <div>
+                    <li class="nav-item color-orange  "role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false ">
+                        <i class="fa fa-user-circle a fa-2x" aria-hidden="true"></i>
+                    </li>
+                    <div class="dropdown-menu  dropdown-menu-right" aria-labelledby="dropdownMenuLink">
+                        <h5 class="dropdown-item" id="user-name"> [user-name] </h5>
+                        <a class="dropdown-item" href="#">
+                            <i class="fa fa-heart-o color-orange mr-3" aria-hidden="true"></i>
+                            My list
+                        </a>
+                        <a class="dropdown-item" href="#">
+                            <i class="fa fa-address-card-o color-orange mr-3" aria-hidden="true"></i>
+
+                            Edit profile
+                        </a>
+                        <a class="dropdown-item" href="log-in.html">
+                            <i class="fa fa-sign-out color-orange mr-3" aria-hidden="true"></i>
+                            Sign out
+                        </a>
+                    </div>  
+                </div>
+                
             </ul>
         </div>
-        
+    
     </nav>
-    <div class="row">
+  
+    <div class="row wrapper">
     <div class="col-md-4">
        <p id="note"><h2 id="checkout"> Checkout</h2>
         To complete your order please ensure your 
-        location details are corect, add any notes, include
-         your payment details, and click-out button at the button as
+        location details are correct, include
+         your payment details, and click-out button at
         the bottom to confirm. 
     </p>
 
     </div>
+    <div class="col-md">
     <div>
-    <div>
-        <h2 class="caption"> 1.Select a saved location to deliver to</h2>
+        <h2 class="caption">1.Select a location to deliver to</h2>
     
     <div class="dropdown">
-        <button onclick="myFunction()" class="dropbtn">Select your location here</button>
-        <div id="myDropdown" class="dropdown-content">
-          <a href="#"> 4 Kilo Campus</a>
-          <a href="#"> 5 Kilo Campus</a>
-          <a href="#"> 6 Kilo Campus</a>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+            <label class="form-check-label" for="inlineRadio1">4k Campus</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+            <label class="form-check-label" for="inlineRadio2">5k Campus</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+            <label class="form-check-label" for="inlineRadio2">6k Campus</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+            <label class="form-check-label" for="inlineRadio2">FBE Campus</label>
         </div>
       </div>
     </div>
@@ -70,24 +102,23 @@
          2. Confirm your order details   
         </div>
         <div id="header">
-
-        
-            <div id="table-header">
-                <div class="table-header-cell">
-                    Item
-
-                </div>
-                <div class="table-header-cell">
-                    Quantity
-
-                </div>
-                <div class="table-header-cell">
-                    Total
-
-                </div>
-                
-
-            </div>
+            <table class="table">
+                <thead class="thead-light">
+                  <tr>
+                    <th scope="col">Item</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Price</th>
+                  </tr>
+                </thead>
+                <tbody class="order-list">
+                  <!-- ordered items displayed here -->
+                </tbody>
+                <tr>
+                    <td>Total</td>
+                    <td></td>
+                    <td id="total-price">0</td>
+                </tr>
+              </table>
         </div>  
 
     
@@ -96,11 +127,9 @@
     <div>
         <h2 class="caption"> 3.Select Payment Option</h2>
 
-        <p id="box"> <i class="bi bi-cash"></i>Cash on Delivery</p> <br>
-        <p>Prepare the necessary amount of cash for your order in advance so that your delivery is qucik and seamless.</p>
-
-
-        
+        <p id="box">Cash on Delivery</p> <br>
+        <p>Prepare the necessary amount of cash for your order in advance so that your delivery is quick and seamless.</p>
+        <button class=" btn btn-orange checkout-btn">Place your order</button>        
   </div>
 
 
@@ -153,5 +182,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="assets/js/app.js"></script>
     <script src="assets/js/checkout.js"></script>
+    <script src="assets/js/logged-in.js"></script>
+    <script src="assets/js/checkout-page.js"></script>
 </body>
 </html>
