@@ -99,3 +99,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     }
 });
+
+
+var navBar = document.querySelector('.fixed-nav');
+window.onscroll = function () { 
+    "use strict";
+    if (document.body.scrollTop >= 120 || document.documentElement.scrollTop >= 120 )    {
+        navBar.classList.add("nav-colored");
+        navBar.classList.remove("nav-transparent");
+    } 
+    else {
+        navBar.classList.add("nav-transparent");
+        navBar.classList.remove("nav-colored");
+    }
+};
