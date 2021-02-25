@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mother Bet Delivery - Contact</title>
+    
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/basics.css">
     <link rel="stylesheet" href="assets/css/index.css">
-    <link rel="stylesheet" href="assets/css/contact.css">
-    <link rel="stylesheet" href="assets/css/user-index.css">
+    <link rel="stylesheet" href="assets/css/checkout.css">
+
 </head>
 <body>
 
@@ -54,57 +56,100 @@
     
     </nav>
   
-<div class="container contact-form">
-            <div class="contact-image">
-                <img src="assets/img/logo.png" alt="MBD-logo"/>
-            </div>
-            <form method="">
-                <h3 class="contact">Drop Us a Message</h3>
-               <div class="row" >
-                    <div class="col-md-6" id="address">
-                        <div class="form-group">
-                            <i class="fa fa-address-book" aria-hidden="true"></i> Address 
-                            
-                           
-                        </div>
-                        <div class="form-group">
-                            <i class="fa fa-telegram" aria-hidden="true"></i> Telegram
-                        </div>
-                        
-                        <div class="form-group">
-                            <i class="fa fa-envelope-o" aria-hidden="true"></i> Email
-                        </div>
+    <div class="row wrapper">
+    <div class="col-md-4">
+       <p id="note"><h2 id="checkout"> Checkout</h2>
+        To complete your order please ensure your 
+        location details are correct, include
+         your payment details, and click-out button at
+        the bottom to confirm. 
+    </p>
+
+    </div>
+    <div class="col-md">
+    <div>
+        <h2 class="caption">1.Select a location to deliver to</h2>
     
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <input type="text" name="txtName" class="form-control" placeholder="Your Name *" value="" />
-                        </div>
-                        <div class="form-group">
-                            <input type="text" name="txtEmail" class="form-control" placeholder="Your Email *" value="" />
-                        </div>
-                        <div class="form-group">
-                            <input type="text" name="txtPhone" class="form-control" placeholder="Your Phone Number *" value="" />
-                        </div>
-                        
-                        <div class="form-group">
-                            <textarea name="txtMsg" class="form-control" placeholder="Your Message *" style="width: 100%; height: 150px;"></textarea>
-                        </div>
-                        <div class="form-group">
-                            <input type="submit" name="btnSubmit" class="btnContact" value="Send Message" />
-                        </div>
-                    </div>
-                </div>
-            </form>
-</div>
-      
+    <div class="dropdown">
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+            <label class="form-check-label" for="inlineRadio1">4k Campus</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+            <label class="form-check-label" for="inlineRadio2">5k Campus</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+            <label class="form-check-label" for="inlineRadio2">6k Campus</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+            <label class="form-check-label" for="inlineRadio2">FBE Campus</label>
+        </div>
+      </div>
+    </div>
+    <!-- <section class="maps">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15763.316909155488!2d38.79662401888094!3d8.987856880673146!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b84fad5cda5a5%3A0xf30b8eb97e105090!2sKategna%20Restaurant%20Bole%20Millennium!5e0!3m2!1sen!2set!4v1595916910231!5m2!1sen!2set" width="1024" height="500" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>  
+        
+        
+    </section>  -->
+     
+    
+    
+    <div id= "table">
+        <div class= "caption">
+         2. Confirm your order details   
+        </div>
+        <div id="header">
+            <table class="table">
+                <thead class="thead-light">
+                  <tr>
+                    <th scope="col">Item</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Price</th>
+                  </tr>
+                </thead>
+                <tbody class="order-list">
+                  <!-- ordered items displayed here -->
+                </tbody>
+                <tr>
+                    <td>Total</td>
+                    <td></td>
+                    <td id="total-price">0</td>
+                </tr>
+              </table>
+        </div>  
+
+    
+
+    </div>
+    <div>
+        <h2 class="caption"> 3.Select Payment Option</h2>
+
+        <p id="box">Cash on Delivery</p> <br>
+        <p>Prepare the necessary amount of cash for your order in advance so that your delivery is quick and seamless.</p>
+        <button class=" btn btn-orange checkout-btn">Place your order</button>        
+  </div>
+
+
+
+
+
+
+
+
+
+
+    </div>
+    </div>
     <footer>
         <div class="row">
             <div class="col-md-2 col-sm-12">
                 <h5>Quick Links</h5>
                 <ul>
                     <li><a class="hover-orange" href="index.html"><i class="fa fa-cutlery mr-2" aria-hidden="true"></i>Home</a></li>
-                    <li><a class="hover-orange" href="index.html#faq"><i class="fa fa-cutlery mr-2" aria-hidden="true"></i>FAQ</a></li>
+                    <li><a class="hover-orange" href="#"><i class="fa fa-cutlery mr-2" aria-hidden="true"></i>FAQ</a></li>
                     <li><a class="hover-orange" href="about.html"><i class="fa fa-cutlery mr-2" aria-hidden="true"></i>About</a></li>
                 </ul>
             </div>
@@ -136,9 +181,8 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="assets/js/app.js"></script>
-
-    <!-- custom js -->
-    <script src="assets/js/user-contact.js"></script>
-</body> 
+    <script src="assets/js/checkout.js"></script>
+    <script src="assets/js/logged-in.js"></script>
+    <script src="assets/js/checkout-page.js"></script>
+</body>
 </html>
-

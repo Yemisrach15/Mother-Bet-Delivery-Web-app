@@ -114,7 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function displayMenu() {
 
-        let foodStore = db.transaction('foods').objectStore('foods');
+        let foodStore = db.transaction('foods').objectStore('foods').index('price');
   
         foodStore.openCursor().onsuccess = function(e) {
             let cursor = e.target.result;

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - index</title>
+    <link rel="stylesheet" href="../assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/admin.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <nav class="navbar fixed-top navbar-expand-md dark-bg   mb-3">
+        <div class="flex-row d-flex">
+            <button type="button" class="navbar-toggler mr-2 " data-toggle="offcanvas" title="Toggle responsive left sidebar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="index.html" title="Free Bootstrap 4 Admin Template">MBD</a>
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse" id="collapsingNavbar">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#" >Notifications</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Mr Admin</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container-fluid" id="main">
+        <div class="row row-offcanvas row-offcanvas-left">
+        <!-- side bar menu -->
+            <div class="col-md-3 col-lg-2 sidebar-offcanvas bg-light color-orange pl-0" id="sidebar" role="navigation">
+                <ul class="nav flex-column sticky-top pl-0 pt-5 mt-5">
+                    <li class="nav-item"><a class="nav-link mt-5" href="newMeal.html">Add New Meal <i class="fa fa-cart-plus fa-2x" aria-hidden="true"></i></a></li>
+                    <li class="nav-item"><a class="nav-link color-dark" href="meals.html"><i class="fa fa-cutlery  mr-2 aria-hidden=true"></i>Meals</a></li>
+                    <li class="nav-item"><a class="nav-link color-dark" href="user.html"><i class="fa fa-users mr-2 " aria-hidden="true"></i>User Accounts</a></li>
+                    <li class="nav-item"><a class="nav-link color-dark" href="orders.html"><i class="fa fa-shopping-cart  mr-2" aria-hidden="true"></i>Order </a></li>
+                    <li class="nav-item"><a class="nav-link color-dark" href="../log-in.html"><i class="fa fa-sign-out mr-2" aria-hidden="true"></i> Log Out </a></li>
+                </ul>
+            </div>
+
+        <!--/col-->
+        <!-- Header start -->
+            <div class="col main pt-5 mt-3">
+                <h1 class="display-4 d-none d-sm-block">
+                Dashboard
+                </h1>
+                <!-- cards - start -->
+                <div class="row mb-3">
+                    <!-- user - card -->
+                    <div class="col-xl-3 col-sm-6 py-2">
+                        <div class="card text-center  text-white h-100">
+                            <div class="card-body dark-bg">
+                                <div class="rotate">
+                                    <i class="fa fa-user fa-4x"></i>
+                                    <i class="fa fa-user fa-2x"></i>
+                                </div>
+                                <h6 class="text-uppercase">Users</h6>
+                                <h1 class="display-4">[50]</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- tasks - card -->
+                    <div class="col-xl-3 col-sm-6 py-2">
+                        <div class="card text-white text-center bg-danger h-100">
+                            <div class="card-body orange-bg">
+                                    <i class="fa fa-list fa-4x"></i>
+                                <h6 class="text-uppercase">Tasks</h6>
+                                <h1 class="display-4">[87]</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Meals - card -->
+                    <div class="col-xl-3 col-sm-6 py-2">
+                        <div class="card text-white text-center bg-info h-100">
+                            <div class="card-body dark-bg">
+                                <div class="rotate">
+                                    <i class="fa fa-cutlery fa-4x aria-hidden=true"></i>                                </div>
+                                <h6 class="text-uppercase">Meals</h6>
+                                <h1 class="display-4">[35]</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Admins - card  -->
+                    <div class="col-xl-3 col-sm-6 py-2">
+                        <div class="card text-white text-center bg-warning h-100">
+                            <div class="card-body orange-bg">
+                                <i class="fa fa-user fa-4x"></i>
+
+                                <h6 class="text-uppercase">Admins</h6>
+                                <h1 class="display-4">[3]</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- cards - End -->
+                <!--/row-->
+    
+               
+    
+                <div class="card-columns mb-3">
+                    <div class="card">
+                        <img class="card-img-top img-fluid" src="//placehold.it/600x200/444/fff?text=..." alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-title">New XL Grid Tier</h4>
+                            <p class="card-text">With screens getting smaller, Bootstrap 4 introduces a new grid breakpoint with the col-xl-* classes. This extra tier extends the media query range all the way down to 576 px. Eventhough the new XL tier would make one think it’s been added to support extra large screens, it’s actually the opposite.</p>
+                        </div>
+                    </div>
+                    <div class="card card-body">
+                        <blockquote class="card-blockquote">
+                            <p>Bootstrap 4 will be lighter and easier to customize.</p>
+                            <footer>
+                                <small class="text-muted">
+                                  Someone famous like <cite title="Source Title">Mark Otto</cite>
+                                </small>
+                            </footer>
+                        </blockquote>
+                    </div>
+                    <div class="card">
+                        <img class="card-img-top img-fluid" src="//placehold.it/600x200/bbb/fff?text=To Do" alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-title">Urgent Tasks</h4>
+                            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                    <!-- <div class="card card-body card-inverse card-primary text-center">
+                        <blockquote class="card-blockquote">
+                            <p>Create masonry or Pinterest-style card layouts in Bootstrap 4.</p>
+                            <footer>
+                                <small>
+                                  Someone famous in <cite title="Source Title">Bootstrap</cite>
+                                </small>
+                            </footer>
+                        </blockquote>
+                    </div> -->
+                <!--/card-columns-->
+    
+    
+                </div>
+
+
+                
+            <!--/main col-->
+        </div>
+    
+    </div>
+    <!--/.container-->
+
+    
+  
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script></body>
+
+</body>
+</html>

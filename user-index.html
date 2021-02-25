@@ -10,26 +10,7 @@
 		<link rel="stylesheet" href="assets/css/index.css">
 		<link rel="stylesheet" href="assets/css/menu.css">
 		<link rel="stylesheet" href="assets/css/user-index.css">
-	
-		<style>
-			/* .fav-slides {display:none;} */
-			</style>
-			<script>
-				var myIndex = 0;
-				carousel();
-				
-				function carousel() {
-					var i;
-					var x = document.getElementsByClassName("fav-img");
-					for (i = 0; i < x.length; i++) {
-						x[i].style.display = "none";  
-					}
-					myIndex++;
-					if (myIndex > x.length) {myIndex = 1}    
-					x[myIndex-1].style.display = "block";  
-					setTimeout(carousel, 2000); // Change image every 2 seconds
-				}
-				</script>
+
 	</head>
 <body>
 		
@@ -117,7 +98,7 @@
 			</section> 
 			<!-- favorites - end  -->
 			<!-- checkout - start -->
-			<section  class="p-5 col-md-5 fixed checkout">
+			<section  class="p-5 col-md-5 sticky checkout">
 				<div class=" text-center mb-5">
 					<h2>Your <span class="color-orange">Orders</span> </h2>
 				</div> 
@@ -127,7 +108,7 @@
 					</ul>
 					
 					<li class="list-group-item list-group-item-action flex-column text-center ">
-						<button class=" btn btn-orange checkout-btn">Check Out</button>
+						<button class=" btn btn-orange checkout-btn"><a href="checkout.html" class="checkout-btnLink">Check Out</a></button>
 					</li>
 					
 				</div>
@@ -204,7 +185,7 @@
 							<h5>Quick Links</h5>
 							<ul>
 									<li><a class="hover-orange" href="index.html"><i class="fa fa-cutlery mr-2" aria-hidden="true"></i>Home</a></li>
-									<li><a class="hover-orange" href="#"><i class="fa fa-cutlery mr-2" aria-hidden="true"></i>FAQ</a></li>
+									<li><a class="hover-orange" href="index.html#faq"><i class="fa fa-cutlery mr-2" aria-hidden="true"></i>FAQ</a></li>
 									<li><a class="hover-orange" href="about.html"><i class="fa fa-cutlery mr-2" aria-hidden="true"></i>About</a></li>
 							</ul>
 					</div>

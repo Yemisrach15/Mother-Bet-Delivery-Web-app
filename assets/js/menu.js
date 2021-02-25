@@ -21,14 +21,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
           if (cursor) {
 
-            let ratingStars = '';
-            for (let i = 1; i <= cursor.value.rating; i++){
-              ratingStars += '<i class="fa fa-star"></i> ';
-            }
-            for (let j = 5 - cursor.value.rating; j > 0; j--){
-              ratingStars += '<i class="fa fa-star-o"></i> ';
-            }
-
             let tags = '';
             for (let k = 0; k < cursor.value.tag.length; k++){
               tags += `<span>${cursor.value.tag[k]}</span>`;
@@ -41,11 +33,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 <img src="${cursor.value.imgSrc}" class="card-img-top img-fluid" alt="">
                 <div class="card-body">
                     <h5 class="card-title">${cursor.value.foodName}</h5>
-                    <p class="rating">Rating
-                        <span class="rating-stars">
-                          ${ratingStars}
-                        </span>
-                    </p>
                     <p class="price">Price
                         <span class="price-amount">${cursor.value.price}.00</span>
                     </p>
@@ -118,11 +105,11 @@ document.addEventListener('DOMContentLoaded', () => {
 					</div>
 					</a>`;
 					cards.appendChild(foodCard);
-					cursor.continue();
 				}
 				if (event.target.textContent.toLowerCase() == 'all') {
 					displayMenu();
 				}
+				cursor.continue();
 		}
     }
 }
