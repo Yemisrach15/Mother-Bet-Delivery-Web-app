@@ -10,26 +10,7 @@
 		<link rel="stylesheet" href="assets/css/index.css">
 		<link rel="stylesheet" href="assets/css/menu.css">
 		<link rel="stylesheet" href="assets/css/user-index.css">
-	
-		<style>
-			/* .fav-slides {display:none;} */
-			</style>
-			<script>
-				var myIndex = 0;
-				carousel();
-				
-				function carousel() {
-					var i;
-					var x = document.getElementsByClassName("fav-img");
-					for (i = 0; i < x.length; i++) {
-						x[i].style.display = "none";  
-					}
-					myIndex++;
-					if (myIndex > x.length) {myIndex = 1}    
-					x[myIndex-1].style.display = "block";  
-					setTimeout(carousel, 2000); // Change image every 2 seconds
-				}
-				</script>
+
 	</head>
 <body>
 		
@@ -117,7 +98,7 @@
 			</section> 
 			<!-- favorites - end  -->
 			<!-- checkout - start -->
-			<section  class="p-5 col-md-5 fixed checkout">
+			<section  class="p-5 col-md-5 sticky checkout">
 				<div class=" text-center mb-5">
 					<h2>Your <span class="color-orange">Orders</span> </h2>
 				</div> 
