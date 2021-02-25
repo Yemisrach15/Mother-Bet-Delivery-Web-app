@@ -82,6 +82,7 @@ body {
 	background-color: transparent;
 	border: none;
 	font-size: 1.8em;
+	outline: none !important;
 }
 .heart-btn i{
 	color: red;

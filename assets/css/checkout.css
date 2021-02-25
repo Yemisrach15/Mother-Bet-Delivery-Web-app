@@ -1,4 +1,11 @@
-
+body {
+  background-color: #fff;
+}
+.wrapper{
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 4em;
+}
 #note{
     margin-top: 40px;
     margin-left: 25px;
@@ -8,63 +15,16 @@
     font-size: 35px;
     font-weight: bold;
 }
-/* Dropdown Button */
-.dropbtn {
-    background-color: #ff6700;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    margin-top: 25px;
-  
-  }
-  
-  /* Dropdown button on hover & focus */
-  .dropbtn:hover, .dropbtn:focus {
-    background-color: #ff6600b7;
-  }
-  
-  /* The container <div> - needed to position the dropdown content */
-  .dropdown {
-    position: relative;
-    display: inline-block;
-  }
-  
-  /* Dropdown Content*/
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
-  
-  /* Links inside the dropdown */
-  .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-  
-  /* Change color of dropdown links on hover */
-  .dropdown-content a:hover {background-color: #ddd}
 
-  .show {display:block;}
 #table{
     width: 100%;
     display: table;
-    margin-left: 8px;
-    margin-top: 80px;
 }
 .caption{
-    display: table-caprion;
     text-align: left;
     font-size: 30px;
     font-weight: bold;
-    margin-top: 30px ;
+    margin: 50px 0 30px 0;
 }
 #table-header{
     display: table-header-group;
@@ -90,19 +50,4 @@
     margin-left: 20px;
     font-weight: bold;
     text-align: center;
-}
-.button{
-  background-color: #ff6700;
-  width: 50%;
-  border: 50px;
-  margin-left: 300px;
-  margin-top: 50px;
-  margin-bottom: 20px;
-  text-align: center;
-  font-weight: bold;
-  font-size: 30px;
-  position: 0 auto;
-  border-radius: 12px;
-  
-  
 }

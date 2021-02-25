@@ -25,6 +25,8 @@ var foodList = [
     { id: 17, foodName: "Special", tag: [], imgSrc: "assets/img/photo_2021-02-04_21-56-04.jpg", rating: 5, price: 60.00},
 ];
 
+var orders = [];
+
 document.addEventListener('DOMContentLoaded', () => {
 
     let userDB = indexedDB.open('users', 1);
@@ -39,6 +41,13 @@ document.addEventListener('DOMContentLoaded', () => {
     foodDB.onsuccess = function() {
         db = foodDB.result;
         populateFoodData();
+    }
+
+    let orderDB = indexedDB.open('orders', 1);
+
+    orderDB.onsuccess = function() {
+        db = orderDB.result;
+        populateOrderData();
     }
 
     userDB.onupgradeneeded = function(event) {
@@ -66,9 +75,25 @@ document.addEventListener('DOMContentLoaded', () => {
         var foodStore = db.createObjectStore('foods', {keyPath: 'id', autoIncrement: true});
         foodStore.createIndex('foodName', 'foodName', {unique: false});
         foodStore.createIndex('imgSrc', 'imgSrc', {unique: false});
-        foodStore.createIndex('rating', 'rating', {unique: false});
         foodStore.createIndex('price', 'price', {unique: false});
         foodStore.createIndex('tag', 'tag', {unique: false});
+
+
+    }
+
+    orderDB.onupgradeneeded = function(event) {
+        var db = event.target.result;
+
+        db.onerror = function(){
+            console.log('Error loading database.');
+        };
+
+        var orderStore = db.createObjectStore('orders', {keyPath: 'id', autoIncrement: true});
+        orderStore.createIndex('customerID', 'customerID', {unique: false});
+        orderStore.createIndex('customerPhoneNo', 'customerPhoneNo', {unique: false});
+        orderStore.createIndex('orderList', 'orderList', {unique: false});
+        orderStore.createIndex('totalPrice', 'totalPrice', {unique: false});
+        orderStore.createIndex('delivered', 'delivered', {unique: false});
 
 
     }
@@ -99,3 +124,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     }
 });
+
+
+var navBar = document.querySelector('.fixed-nav');
+window.onscroll = function () { 
+    "use strict";
+    if (document.body.scrollTop >= 120 || document.documentElement.scrollTop >= 120 )    {
+        navBar.classList.add("nav-colored");
+        navBar.classList.remove("nav-transparent");
+    } 
+    else {
+        navBar.classList.add("nav-transparent");
+        navBar.classList.remove("nav-colored");
+    }
+};

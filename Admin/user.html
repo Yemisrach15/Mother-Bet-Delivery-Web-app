@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - users</title>
+    <link rel="stylesheet" href="../assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/admin.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <nav class="navbar fixed-top navbar-expand-md dark-bg  mb-3">
+        <div class="flex-row d-flex">
+            <button type="button" class="navbar-toggler mr-2 " data-toggle="offcanvas" title="Toggle responsive left sidebar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="index.html" title="Free Bootstrap 4 Admin Template">MBD</a>
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse" id="collapsingNavbar">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#" >Notifications</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Mr Admin</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container-fluid" id="main">
+        <div class="row row-offcanvas row-offcanvas-left">
+        <!-- side bar menu -->
+            <div class="col-md-3 col-lg-2 sidebar-offcanvas bg-light color-orange pl-0" id="sidebar" role="navigation">
+                <ul class="nav flex-column sticky-top pl-0 pt-5 mt-5">
+                    <li class="nav-item"><a class="nav-link mt-5" href="newMeal.html">Add New Meal <i class="fa fa-cart-plus fa-2x" aria-hidden="true"></i></a></li>
+                    <li class="nav-item"><a class="nav-link color-dark" href="meals.html"><i class="fa fa-cutlery  mr-2 aria-hidden=true"></i>Meals</a></li>
+                    <li class="nav-item"><a class="nav-link color-dark" href="user.html"><i class="fa fa-users mr-2 " aria-hidden="true"></i>User Accounts</a></li>
+                    <li class="nav-item"><a class="nav-link color-dark" href="orders.html"><i class="fa fa-shopping-cart  mr-2" aria-hidden="true"></i>Order </a></li>
+                    <li class="nav-item"><a class="nav-link color-dark" href="../log-in.html"><i class="fa fa-sign-out mr-2" aria-hidden="true"></i> Log Out </a></li>
+                </ul>
+            </div>
+
+        <!--/col-->
+            <div class="col main pt-5 mt-3">
+                <h1 class="display-4 d-none d-sm-block">
+                Users
+                </h1>
+                <hr>
+                <div class="d-flex justify-content-around">
+                    <div class="form-group ">
+                        <select class="form-control" id="user-filters">
+                          <option>A - Z</option>
+                          <option>Z - A</option>
+                          <option>Campus</option>
+                          <option>Descending Bill order </option>
+                          <option>Ascending Bill order </option>
+                          <option>Fasting</option>
+                          <option>Non-Fasting</option>
+                        </select>
+                      </div>
+                    
+                      
+                    <div class="form-outline mb-3">
+                        <input type="search" id="form1" class="form-control" placeholder="Search here"
+                        aria-label="Search" />
+                    </div>
+                </div>
+
+                <div class="row ">
+                    <!--  table - start -->
+                    <div class="col">
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <tbody>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Name </th>
+                                        <th>Phone Number</th>
+                                        <th>Campus</th>
+                                        <th>Ordered Item</th>
+                                        <th>Bill</th>
+
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>John Doe</td>
+                                        <td>978 - 002 - 114 </td>
+                                        <td>Main </td>
+                                        <td>Food Name</td>
+                                        <td>55 B</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>John Doe</td>
+                                        <td>978 - 002 - 114 </td>
+                                        <td>Main </td>
+                                        <td>Food Name</td>
+                                        <td>55 B</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>John Doe</td>
+                                        <td>978 - 002 - 114 </td>
+                                        <td>CBE </td>
+                                        <td>Food Name</td>
+                                        <td>55 B</td>
+                                    </tr><tr>
+                                        <td>1</td>
+                                        <td>John Doe</td>
+                                        <td>978 - 002 - 114 </td>
+                                        <td>NSF </td>
+                                        <td>Food Name</td>
+                                        <td>55 B</td>
+                                    </tr><tr>
+                                        <td>1</td>
+                                        <td>John Doe</td>
+                                        <td>978 - 002 - 114 </td>
+                                        <td>AAIT </td>
+                                        <td>Food Name</td>
+                                        <td>55 B</td>
+                                    </tr><tr>
+                                        <td>1</td>
+                                        <td>John Doe</td>
+                                        <td>978 - 002 - 114 </td>
+                                        <td>Main </td>
+                                        <td>Food Name</td>
+                                        <td>55 B</td>
+                                    </tr><tr>
+                                        <td>1</td>
+                                        <td>John Doe</td>
+                                        <td>978 - 002 - 114 </td>
+                                        <td>Main </td>
+                                        <td>Food Name</td>
+                                        <td>55 B</td>
+                                    </tr><tr>
+                                        <td>1</td>
+                                        <td>John Doe</td>
+                                        <td>978 - 002 - 114 </td>
+                                        <td>Main </td>
+                                        <td>Food Name</td>
+                                        <td>55 B</td>
+                                    </tr><tr>
+                                        <td>1</td>
+                                        <td>John Doe</td>
+                                        <td>978 - 002 - 114 </td>
+                                        <td>Main </td>
+                                        <td>Food Name</td>
+                                        <td>55 B</td>
+                                    </tr><tr>
+                                        <td>1</td>
+                                        <td>John Doe</td>
+                                        <td>978 - 002 - 114 </td>
+                                        <td>Main </td>
+                                        <td>Food Name</td>
+                                        <td>55 B</td>
+                                    </tr><tr>
+                                        <td>1</td>
+                                        <td>John Doe</td>
+                                        <td>978 - 002 - 114 </td>
+                                        <td>Main </td>
+                                        <td>Food Name</td>
+                                        <td>55 B</td>
+                                    </tr><tr>
+                                        <td>1</td>
+                                        <td>John Doe</td>
+                                        <td>978 - 002 - 114 </td>
+                                        <td>Main </td>
+                                        <td>Food Name</td>
+                                        <td>55 B</td>
+                                    </tr><tr>
+                                        <td>1</td>
+                                        <td>John Doe</td>
+                                        <td>978 - 002 - 114 </td>
+                                        <td>Main </td>
+                                        <td>Food Name</td>
+                                        <td>55 B</td>
+                                    </tr><tr>
+                                        <td>1</td>
+                                        <td>John Doe</td>
+                                        <td>978 - 002 - 114 </td>
+                                        <td>Main </td>
+                                        <td>Food Name</td>
+                                        <td>55 B</td>
+                                    </tr>
+                                
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- order history table - end -->
+                </div>
+        
+            </div>
+        </div>
+    </div>
+
+    
+    
+  
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script></body>
+
+</body>
+</html>

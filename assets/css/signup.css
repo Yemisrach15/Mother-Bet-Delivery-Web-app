@@ -19,6 +19,9 @@ body {
     width: 400px;
     max-width: 100%;
 }
+#signup{
+    margin: 2.8em 0;
+}
 .header{
     background-color: #f7f7f7;
     border-bottom: 1px, solid #f0f0f0;
