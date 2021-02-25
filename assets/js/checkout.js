@@ -1,3 +1,4 @@
+const cards = document.querySelector(".cards");
 var addFavorite = [];
 var itemAmount = document.querySelector('.item-amount');
 var addAmount = document.querySelectorAll('.add-amount');
@@ -6,6 +7,37 @@ var removeItem = document.querySelectorAll('.remove-item');
 const checkoutBox = document.querySelector('.checkout-box ul');
 var heartBtn;
 
+window.onunload = function() {
+    // add to favorites DB
+    let userDB = indexedDB.open('users', 1);
+
+    userDB.onsuccess = function() {
+        db = userDB.result;
+        
+        var transaction = db.transaction(['users'], 'readwrite');
+        var userStore = transaction.objectStore('users');
+        var request = userStore.index('userName').get(userName);
+
+        
+        console.log(userName);
+
+        request.onsuccess = function(e) {
+            var userDb = e.target.result;
+
+            var newFav = userDb.favorites;
+            addFavorite.forEach((fav) => {
+                if (!newFav.includes(fav)) {
+                    newFav.push(fav);
+                }
+            });
+
+            userDb.favorites = newFav;
+            console.log(userDb.favorites);
+            userStore.put(userDb);
+
+        }
+    }
+}
 
 cards.addEventListener('click', (e) => {
     if (e.target.parentElement.classList.contains('card')){
@@ -79,51 +111,3 @@ function addListeners () {
         })
     })
 }
-const ordersView = document.querySelector('.order-list');
-const totalPriceView = document.getElementById('total-price');
-let totalPrice = 0;
-var orders;
-
-document.addEventListener('DOMContentLoaded', () => {
-
-    orders = JSON.parse(localStorage.getItem('orders'));
-    let ordersID = [];
-    orders.forEach((order) => {
-        ordersID.push(order.foodId);
-    })
-
-    let foodDB = indexedDB.open('foods', 1);
-
-    foodDB.onsuccess = function() {
-        db = foodDB.result;
-        displayOrders();
-    }
-
-    function displayOrders() {
-
-        let foodStore = db.transaction('foods').objectStore('foods');
-  
-        foodStore.openCursor().onsuccess = function(e) {
-            let cursor = e.target.result;
-  
-            if (cursor) {  
-
-                if(ordersID.includes(cursor.value.id)) {
-                    const orderRow = document.createElement("tr");
-                    var quantity = orders[ordersID.indexOf(cursor.value.id)].itemAmount;
-                    orderRow.innerHTML = `
-                                <td>${cursor.value.foodName}</td>
-                                <td>${quantity}</td>
-                                <td class = 'total-price'>${cursor.value.price * quantity} birr</td>`;
-                    ordersView.appendChild(orderRow);    
-
-                    // calculate and display total price
-                    totalPrice += (cursor.value.price * quantity);
-                    totalPriceView.textContent = totalPrice + ' birr';
-                }
-            
-                cursor.continue();
-            }
-        }
-    };    
-})

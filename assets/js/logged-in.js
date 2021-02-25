@@ -4,11 +4,13 @@ const userContact = document.querySelector('.user-contact');
 const userAbout = document.querySelector('.user-about');
 const userIndex = document.querySelector('.user-index');
 const checkoutBtn = document.querySelector('.checkout-btnLink');
-const cards = document.querySelector(".cards");
+// const cards = document.querySelector(".cards");
+const filters = document.querySelector('.filters ul');
+
 
 const urlParams = new URLSearchParams(window.location.search);
 const userName = urlParams.get('username');
-var userFav = [];
+// var userFav = [];
 
 // var db;
 // var dbFood;
@@ -24,6 +26,7 @@ window.onunload = function() {
         ordersObjArray.push(orderObj);
     })
     localStorage.setItem('orders', JSON.stringify(ordersObjArray));
+
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -39,6 +42,11 @@ document.addEventListener('DOMContentLoaded', () => {
         db = foodDB.result;
         displayMenu();
     }
+
+    loadFavoritesFromDB('users', userName)
+    .then((favoriteArray) => {
+        displayFavoritesFromDB('foods', favoriteArray);
+    })
 
     function loadFavoritesFromDB(storeName, userName) {
         return new Promise( (resolve, reject) => {
@@ -122,11 +130,6 @@ document.addEventListener('DOMContentLoaded', () => {
         };
     }
 
-    loadFavoritesFromDB('users', userName)
-    .then((favoriteArray) => {
-        displayFavoritesFromDB('foods', favoriteArray);
-    })
-
     function displayMenu() {
 
         let foodStore = db.transaction('foods').objectStore('foods').index('price');
@@ -166,6 +169,63 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       };
     
+    filters.addEventListener('click', filterFunction);
+
+    function filterFunction(event) {
+        while (cards.firstChild) {   
+            cards.removeChild(cards.firstChild);
+        };
+
+        let prevFilter = filters.querySelector('.active-filter');
+        prevFilter.classList.remove('active-filter');
+
+        event.target.classList.add('active-filter');
+        // console.log(event.target.textContent.toLowerCase());
+
+        let foodStore = db.transaction('foods').objectStore('foods').index('price');
+
+        foodStore.openCursor().onsuccess = function(e) {
+            if (event.target.textContent.toLowerCase() == 'all') {
+                displayMenu();
+                return;
+            }
+            let cursor = e.target.result;
+
+            if (cursor) {
+
+                if (cursor.value.tag.includes(event.target.textContent.toLowerCase())) {
+                    // console.log(cursor.value.foodName + " includes " + event.target.textContent + "  " + cursor.value.tag);
+                    // console.log(cursor.value.foodName);
+
+                    let tags = '';
+                    for (let k = 0; k < cursor.value.tag.length; k++){
+                        tags += `<span>${cursor.value.tag[k]}</span>`;
+                    } 
+
+                    const foodCard = document.createElement("div");
+                    foodCard.className = 'col-12 col-md-4 col-lg-3';
+                    foodCard.innerHTML = `<a href="">
+                    <div class="card">
+                        <img src="${cursor.value.imgSrc}" class="card-img-top img-fluid" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">${cursor.value.foodName}</h5>
+                            <p class="price">Price
+                                <span class="price-amount">${cursor.value.price}.00</span>
+                            </p>
+                            <p class="tags">
+                                    ${tags}  
+                            </p>
+                        </div>
+                    </div>
+                    </a>`;
+                    cards.appendChild(foodCard);
+            }
+
+            cursor.continue();
+        }
+    }
+    }
+
     function getFavorites(db) {
         var transaction = db.transaction(['users']);
         var usersStore = transaction.objectStore('users');
