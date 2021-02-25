@@ -1,3 +1,4 @@
+const cards = document.querySelector(".cards");
 var addFavorite = [];
 var itemAmount = document.querySelector('.item-amount');
 var addAmount = document.querySelectorAll('.add-amount');
@@ -6,6 +7,37 @@ var removeItem = document.querySelectorAll('.remove-item');
 const checkoutBox = document.querySelector('.checkout-box ul');
 var heartBtn;
 
+window.onunload = function() {
+    // add to favorites DB
+    let userDB = indexedDB.open('users', 1);
+
+    userDB.onsuccess = function() {
+        db = userDB.result;
+        
+        var transaction = db.transaction(['users'], 'readwrite');
+        var userStore = transaction.objectStore('users');
+        var request = userStore.index('userName').get(userName);
+
+        
+        console.log(userName);
+
+        request.onsuccess = function(e) {
+            var userDb = e.target.result;
+
+            var newFav = userDb.favorites;
+            addFavorite.forEach((fav) => {
+                if (!newFav.includes(fav)) {
+                    newFav.push(fav);
+                }
+            });
+
+            userDb.favorites = newFav;
+            console.log(userDb.favorites);
+            userStore.put(userDb);
+
+        }
+    }
+}
 
 cards.addEventListener('click', (e) => {
     if (e.target.parentElement.classList.contains('card')){
