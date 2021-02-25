@@ -91,14 +91,15 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
+  background:rgba(14, 12, 32, 0.822);
   border: 8px solid #ff6600ee;
   border-radius: 50%;
   font-size: 30px;
   color: #000;
 }
 .circle{
-  margin: 3rem;
-  margin-left: 5rem;
+  margin-left: 30rem;
+  /* margin-left: 5rem; */
   align-items: center;
 }
 .circle a:hover{
@@ -111,10 +112,9 @@ body{
   font-weight: bolder;
 }
 .butC{
-  background-color: rgb(119, 127, 240);
   text-transform: uppercase;
   text-decoration: none;
-  color: #ff6600ee;
+  /* color: #ff6600ee; */
 
 }
 
