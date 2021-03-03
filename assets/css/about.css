@@ -25,7 +25,7 @@ body{
     height: 30rem;
 }
 .p1{
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     
 }
 .last{
@@ -117,6 +117,9 @@ body{
 .h3{
   font-family: 'Bebas Neue', cursive;
   font-size: 3rem;
+}
+.ulAbt{
+  font-size: 20px;
 }
 p{
   font-size: 20px;
