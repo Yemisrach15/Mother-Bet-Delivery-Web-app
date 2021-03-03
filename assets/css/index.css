@@ -279,6 +279,7 @@ header .card{
 .image{
     border-radius: 50%;
 }
-.selam{
+#selam{
     text-align: center;
+    font-size: 20px;
 }
