@@ -58,21 +58,21 @@ crossorigin="anonymous">
                 </div>
                 <div class="form-control">
                     <label>Phone Number</label>
-                    <input type="phone" id="phone" placeholder="Enter phone number:">
+                    <input type="phone" id="phone" pattern="[0-9]{10}" placeholder="Enter phone number:">
                     <i class="fa fa-check-circle"></i>
                     <i class="fa fa-exclamation-circle"></i>
                     <small>Invalid input!</small>
                 </div>
                 <div class="form-control">
                     <label>Password</label>
-                    <input type="password" id="password" placeholder="Enter password:">
+                    <input type="password" id="password" pattern="^[A-Za-z0-9]{6,12}" placeholder="Enter password:">
                     <i class="fa fa-check-circle"></i>
                     <i class="fa fa-exclamation-circle"></i>
                     <small>Invalid input!</small>
                 </div>
                 <div class="form-control">
                     <label>Confirm Password</label>
-                    <input type="password" id="password2" placeholder="Enter password again:">
+                    <input type="password" id="password2" pattern="^[A-Za-z0-9]{6,12}" placeholder="Enter password again:">
                     <i class="fa fa-check-circle"></i>
                     <i class="fa fa-exclamation-circle"></i>
                     <small>Invalid input!</small>
