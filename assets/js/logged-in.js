@@ -15,7 +15,9 @@ const userName = urlParams.get('username');
 // var db;
 // var dbFood;
 
-window.onunload = function() {
+checkoutBtn.addEventListener('click', checkoutToPage);
+
+function checkoutToPage() {
     var orders = document.querySelectorAll('.checkout-box ul li');
     var ordersObjArray = [];
     orders.forEach((order) => {
