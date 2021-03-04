@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MBD - Admin</title>
+
+    <link rel="stylesheet" href="../assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/admin.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/login.css">
+</head>
+<body>
+
+    <nav class="navbar fixed-top navbar-expand-md dark-bg   mb-3">
+        <div class="flex-row d-flex">
+            <button type="button" class="navbar-toggler mr-2 " data-toggle="offcanvas" title="Toggle responsive left sidebar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="index.html" title="Free Bootstrap 4 Admin Template">MBD</a>
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse" id="collapsingNavbar">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Mr Admin</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div id="login">
+        <!-- <h3 class="text-center pt-5">Login form</h3> -->
+        <div class="container">
+            <div id="login-row" class="row justify-content-center align-items-center">
+                <div id="login-column" class="col-md-6">
+                    <div id="login-box" class="col-md-12">
+                        <form id="login-form" class="form" action="index.html">
+                            <h3 class="text-center">Login</h3>
+                            <div class="form-group">
+                                <label for="username" class="">Admin Username:</label><br>
+                                <input type="text" name="username" id="userName" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="password" class="">Password:</label><br>
+                                <input type="password" id="password" class="form-control">
+                            </div>
+                            <div class="show-error"></div>
+                            <div class="form-group">
+                                <div id="register-link" class="text-right">
+                                    <button class="text-info" type="submit" id="logInBtn">Log In</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="assets/js/adminLogin.js"></script>
+</body>
+</html>
