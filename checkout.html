@@ -128,8 +128,33 @@
         <h2 class="caption"> 3.Select Payment Option</h2>
 
         <p id="box">Cash on Delivery</p> <br>
-        <p>Prepare the necessary amount of cash for your order in advance so that your delivery is quick and seamless.</p>
-        <button class=" btn btn-orange checkout-btn">Place your order</button>        
+        <p>
+            Prepare the necessary amount of cash for your order in advance so that your delivery is quick and seamless.
+        </p>
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-orange checkout-btn" data-toggle="modal" data-target="#exampleModal">
+            Place your order
+        </button>
+        
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Delivery on the way!</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body my-3">
+                    Prepare the necessary amount of cash for your order in advance so that your delivery is quick and seamless. We will try to deliver your order as fast as possible. 
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-orange" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+            </div>
+        </div>       
   </div>
 
 
