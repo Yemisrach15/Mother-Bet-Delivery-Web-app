@@ -276,3 +276,10 @@ header .card{
 .faq .card{
     margin-bottom: .5em;
 }
+.image{
+    border-radius: 50%;
+}
+#selam{
+    text-align: center;
+    font-size: 20px;
+}

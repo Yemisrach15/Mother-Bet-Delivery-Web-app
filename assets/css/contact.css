@@ -74,3 +74,10 @@ form h3.contact{
     border: none;
     cursor: pointer;
 }
+
+@media (max-width :766px){
+    .form-group{
+        margin-top: 35px;
+    }
+
+}
