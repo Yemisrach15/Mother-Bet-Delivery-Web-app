@@ -34,7 +34,6 @@ function checkoutToPage() {
 document.addEventListener('DOMContentLoaded', () => {
     userNameView.textContent = userName;
     userContact.setAttribute('href', `user-contact.html?username=${userName}`);
-    userAbout.setAttribute('href', `user-about.html?username=${userName}`);
     userIndex.setAttribute('href', `user-index.html?username=${userName}`);
     checkoutBtn.setAttribute('href', `checkout.html?username=${userName}`);
 
